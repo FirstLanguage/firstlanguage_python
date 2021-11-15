@@ -121,8 +121,8 @@ This API uses `Custom Header Signature`.
 
 ## List of APIs
 
-* [Basic AP Is](/doc/controllers/basic-api.md)
-* [Advanced AP Is](/doc/controllers/advanced-api.md)
+* [Basic APIs](/doc/controllers/basic-api.md)
+* [Advanced APIs](/doc/controllers/advanced-api.md)
 
 ## Classes Documentation
 
