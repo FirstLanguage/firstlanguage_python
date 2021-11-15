@@ -13,6 +13,8 @@ OpenAPI syntax we use a few [vendor extensions](https://github.com/Redocly/redoc
 
 ## Building
 
+Download the FirstLanguage Python SDK from <a href="FirstLanguage_PythonSDK.zip">here</a>
+
 You must have Python `3 >=3.7, <= 3.9` installed on your system to install and run this SDK. This SDK package depends on other Python packages like nose, jsonpickle etc. These dependencies are defined in the `requirements.txt` file that comes with the SDK. To resolve these dependencies, you can use the PIP Dependency manager. Install it by following steps at [https://pip.pypa.io/en/stable/installing/](https://pip.pypa.io/en/stable/installing/).
 
 Python and PIP executables should be defined in your PATH. Open command prompt and type `pip --version`. This should display the version of the PIP Dependency Manager installed if your installation was successful and the paths are properly defined.
