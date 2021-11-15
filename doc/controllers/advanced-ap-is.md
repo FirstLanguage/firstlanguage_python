@@ -12,9 +12,9 @@ advanced_ap_is_controller = client.advanced_ap_is
 
 ## Methods
 
-* [Get Classification](/doc/controllers/advanced-ap-is.md#get-classification)
-* [Get QA](/doc/controllers/advanced-ap-is.md#get-qa)
-* [Get NER](/doc/controllers/advanced-ap-is.md#get-ner)
+* [Get Classification](/fl-python/doc/controllers/advanced-ap-is.md#get-classification)
+* [Get QA](/fl-python/doc/controllers/advanced-ap-is.md#get-qa)
+* [Get NER](/fl-python/doc/controllers/advanced-ap-is.md#get-ner)
 
 
 # Get Classification
@@ -36,7 +36,7 @@ def get_classification(self,
 
 ## Response Type
 
-[`Responseclassify`](/doc/models/responseclassify.md)
+[`Responseclassify`](/fl-python/doc/models/responseclassify.md)
 
 ## Example Usage
 
@@ -50,8 +50,8 @@ result = advanced_ap_is_controller.get_classification(body)
 
 | HTTP Status Code | Error Description | Exception Class |
 |  --- | --- | --- |
-| 400 | Error output | [`ErrorsException`](/doc/models/errors-exception.md) |
-| 426 | Please use HTTPS protocol | [`ApiClassify426ErrorException`](/doc/models/api-classify-426-error-exception.md) |
+| 400 | Error output | [`ErrorsException`](/fl-python/doc/models/errors-exception.md) |
+| 426 | Please use HTTPS protocol | [`ApiClassify426ErrorException`](/fl-python/doc/models/api-classify-426-error-exception.md) |
 
 
 # Get QA
@@ -73,7 +73,7 @@ def get_qa(self,
 
 ## Response Type
 
-[`ApiQaResponse`](/doc/models/api-qa-response.md)
+[`ApiQaResponse`](/fl-python/doc/models/api-qa-response.md)
 
 ## Example Usage
 
@@ -96,8 +96,8 @@ result = advanced_ap_is_controller.get_qa()
 
 | HTTP Status Code | Error Description | Exception Class |
 |  --- | --- | --- |
-| 400 | Bad Request | [`ErrorsException`](/doc/models/errors-exception.md) |
-| 426 | Please use HTTPS protocol | [`M426ErrorException`](/doc/models/m426-error-exception.md) |
+| 400 | Bad Request | [`ErrorsException`](/fl-python/doc/models/errors-exception.md) |
+| 426 | Please use HTTPS protocol | [`M426ErrorException`](/fl-python/doc/models/m426-error-exception.md) |
 
 
 # Get NER
@@ -119,7 +119,7 @@ def get_ner(self,
 
 ## Response Type
 
-[`List of ApiNerResponse`](/doc/models/api-ner-response.md)
+[`List of ApiNerResponse`](/fl-python/doc/models/api-ner-response.md)
 
 ## Example Usage
 
@@ -150,6 +150,6 @@ result = advanced_ap_is_controller.get_ner()
 
 | HTTP Status Code | Error Description | Exception Class |
 |  --- | --- | --- |
-| 400 | Bad Request | [`ErrorsException`](/doc/models/errors-exception.md) |
-| 426 | Please use HTTPS protocol | [`M426ErrorException`](/doc/models/m426-error-exception.md) |
+| 400 | Bad Request | [`ErrorsException`](/fl-python/doc/models/errors-exception.md) |
+| 426 | Please use HTTPS protocol | [`M426ErrorException`](/fl-python/doc/models/m426-error-exception.md) |
 

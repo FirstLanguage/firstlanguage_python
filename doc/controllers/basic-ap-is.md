@@ -12,10 +12,10 @@ basic_ap_is_controller = client.basic_ap_is
 
 ## Methods
 
-* [Get Stemmer](/doc/controllers/basic-ap-is.md#get-stemmer)
-* [Get Lemma](/doc/controllers/basic-ap-is.md#get-lemma)
-* [Get Morph](/doc/controllers/basic-ap-is.md#get-morph)
-* [Get Postag](/doc/controllers/basic-ap-is.md#get-postag)
+* [Get Stemmer](/fl-python/doc/controllers/basic-ap-is.md#get-stemmer)
+* [Get Lemma](/fl-python/doc/controllers/basic-ap-is.md#get-lemma)
+* [Get Morph](/fl-python/doc/controllers/basic-ap-is.md#get-morph)
+* [Get Postag](/fl-python/doc/controllers/basic-ap-is.md#get-postag)
 
 
 # Get Stemmer
@@ -68,7 +68,7 @@ def get_stemmer(self,
 
 ## Response Type
 
-[`List of Responsestem`](/doc/models/responsestem.md)
+[`List of Responsestem`](/fl-python/doc/models/responsestem.md)
 
 ## Example Usage
 
@@ -82,8 +82,8 @@ result = basic_ap_is_controller.get_stemmer(body)
 
 | HTTP Status Code | Error Description | Exception Class |
 |  --- | --- | --- |
-| 400 | Error output | [`ErrorsException`](/doc/models/errors-exception.md) |
-| 426 | Please use HTTPS protocol | [`ApiStemmer426ErrorException`](/doc/models/api-stemmer-426-error-exception.md) |
+| 400 | Error output | [`ErrorsException`](/fl-python/doc/models/errors-exception.md) |
+| 426 | Please use HTTPS protocol | [`ApiStemmer426ErrorException`](/fl-python/doc/models/api-stemmer-426-error-exception.md) |
 
 
 # Get Lemma
@@ -105,7 +105,7 @@ def get_lemma(self,
 
 ## Response Type
 
-[`List of Responselemma`](/doc/models/responselemma.md)
+[`List of Responselemma`](/fl-python/doc/models/responselemma.md)
 
 ## Example Usage
 
@@ -119,8 +119,8 @@ result = basic_ap_is_controller.get_lemma(body)
 
 | HTTP Status Code | Error Description | Exception Class |
 |  --- | --- | --- |
-| 400 | Error output | [`ErrorsException`](/doc/models/errors-exception.md) |
-| 426 | Please use HTTPS protocol | [`ApiLemmatize426ErrorException`](/doc/models/api-lemmatize-426-error-exception.md) |
+| 400 | Error output | [`ErrorsException`](/fl-python/doc/models/errors-exception.md) |
+| 426 | Please use HTTPS protocol | [`ApiLemmatize426ErrorException`](/fl-python/doc/models/api-lemmatize-426-error-exception.md) |
 
 
 # Get Morph
@@ -142,7 +142,7 @@ def get_morph(self,
 
 ## Response Type
 
-[`Responsemorph`](/doc/models/responsemorph.md)
+[`Responsemorph`](/fl-python/doc/models/responsemorph.md)
 
 ## Example Usage
 
@@ -156,8 +156,8 @@ result = basic_ap_is_controller.get_morph(body)
 
 | HTTP Status Code | Error Description | Exception Class |
 |  --- | --- | --- |
-| 400 | Error output | [`ErrorsException`](/doc/models/errors-exception.md) |
-| 426 | Please use HTTPS protocol | [`ApiMorph426ErrorException`](/doc/models/api-morph-426-error-exception.md) |
+| 400 | Error output | [`ErrorsException`](/fl-python/doc/models/errors-exception.md) |
+| 426 | Please use HTTPS protocol | [`ApiMorph426ErrorException`](/fl-python/doc/models/api-morph-426-error-exception.md) |
 
 
 # Get Postag
@@ -191,7 +191,7 @@ def get_postag(self,
 
 ## Response Type
 
-[`List of Responsepo`](/doc/models/responsepo.md)
+[`List of Responsepo`](/fl-python/doc/models/responsepo.md)
 
 ## Example Usage
 
@@ -205,6 +205,6 @@ result = basic_ap_is_controller.get_postag(body)
 
 | HTTP Status Code | Error Description | Exception Class |
 |  --- | --- | --- |
-| 400 | Error output | [`ErrorsException`](/doc/models/errors-exception.md) |
-| 426 | Please use HTTPS protocol | [`ApiPostag426ErrorException`](/doc/models/api-postag-426-error-exception.md) |
+| 400 | Error output | [`ErrorsException`](/fl-python/doc/models/errors-exception.md) |
+| 426 | Please use HTTPS protocol | [`ApiPostag426ErrorException`](/fl-python/doc/models/api-postag-426-error-exception.md) |
 
