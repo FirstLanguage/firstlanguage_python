@@ -33,6 +33,6 @@ The gateway for the SDK. This class acts as a factory for the Controllers and al
 
 | Name | Description |
 |  --- | --- |
-| basic_ap_is | Gets BasicAPIsController |
-| advanced_ap_is | Gets AdvancedAPIsController |
+| basic_api | Gets BasicAPIsController |
+| advanced_api | Gets AdvancedAPIsController |
 

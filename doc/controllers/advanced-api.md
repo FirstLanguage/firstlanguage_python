@@ -1,9 +1,9 @@
-# Advanced AP Is
+# Advanced APIs
 
 Advanced text processing APIs
 
 ```python
-advanced_ap_is_controller = client.advanced_ap_is
+advanced_api_controller = client.advanced_api
 ```
 
 ## Class Name
@@ -12,9 +12,9 @@ advanced_ap_is_controller = client.advanced_ap_is
 
 ## Methods
 
-* [Get Classification](/fl-python/doc/controllers/advanced-ap-is.md#get-classification)
-* [Get QA](/fl-python/doc/controllers/advanced-ap-is.md#get-qa)
-* [Get NER](/fl-python/doc/controllers/advanced-ap-is.md#get-ner)
+* [Get Classification](/fl-python/doc/controllers/advanced-api.md#get-classification)
+* [Get QA](/fl-python/doc/controllers/advanced-api.md#get-qa)
+* [Get NER](/fl-python/doc/controllers/advanced-api.md#get-ner)
 
 
 # Get Classification
@@ -43,7 +43,7 @@ def get_classification(self,
 ```python
 body = jsonpickle.decode('{"key1":"val1","key2":"val2"}')
 
-result = advanced_ap_is_controller.get_classification(body)
+result = advanced_api_controller.get_classification(body)
 ```
 
 ## Errors
@@ -78,7 +78,7 @@ def get_qa(self,
 ## Example Usage
 
 ```python
-result = advanced_ap_is_controller.get_qa()
+result = advanced_api_controller.get_qa()
 ```
 
 ## Example Response *(as JSON)*
@@ -124,7 +124,7 @@ def get_ner(self,
 ## Example Usage
 
 ```python
-result = advanced_ap_is_controller.get_ner()
+result = advanced_api_controller.get_ner()
 ```
 
 ## Example Response *(as JSON)*

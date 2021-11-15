@@ -1,9 +1,9 @@
-# Basic AP Is
+# Basic APIs
 
 Basic NLP text processing APIs
 
 ```python
-basic_ap_is_controller = client.basic_ap_is
+basic_api_controller = client.basic_api
 ```
 
 ## Class Name
@@ -12,10 +12,10 @@ basic_ap_is_controller = client.basic_ap_is
 
 ## Methods
 
-* [Get Stemmer](/fl-python/doc/controllers/basic-ap-is.md#get-stemmer)
-* [Get Lemma](/fl-python/doc/controllers/basic-ap-is.md#get-lemma)
-* [Get Morph](/fl-python/doc/controllers/basic-ap-is.md#get-morph)
-* [Get Postag](/fl-python/doc/controllers/basic-ap-is.md#get-postag)
+* [Get Stemmer](/fl-python/doc/controllers/basic-api.md#get-stemmer)
+* [Get Lemma](/fl-python/doc/controllers/basic-api.md#get-lemma)
+* [Get Morph](/fl-python/doc/controllers/basic-api.md#get-morph)
+* [Get Postag](/fl-python/doc/controllers/basic-api.md#get-postag)
 
 
 # Get Stemmer
@@ -75,7 +75,7 @@ def get_stemmer(self,
 ```python
 body = jsonpickle.decode('{"key1":"val1","key2":"val2"}')
 
-result = basic_ap_is_controller.get_stemmer(body)
+result = basic_api_controller.get_stemmer(body)
 ```
 
 ## Errors
@@ -112,7 +112,7 @@ def get_lemma(self,
 ```python
 body = jsonpickle.decode('{"key1":"val1","key2":"val2"}')
 
-result = basic_ap_is_controller.get_lemma(body)
+result = basic_api_controller.get_lemma(body)
 ```
 
 ## Errors
@@ -149,7 +149,7 @@ def get_morph(self,
 ```python
 body = jsonpickle.decode('{"key1":"val1","key2":"val2"}')
 
-result = basic_ap_is_controller.get_morph(body)
+result = basic_api_controller.get_morph(body)
 ```
 
 ## Errors
@@ -198,7 +198,7 @@ def get_postag(self,
 ```python
 body = jsonpickle.decode('{"key1":"val1","key2":"val2"}')
 
-result = basic_ap_is_controller.get_postag(body)
+result = basic_api_controller.get_postag(body)
 ```
 
 ## Errors
