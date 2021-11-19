@@ -11,14 +11,16 @@ else:
         long_description = fh.read()
 
 setup(
-    name='firstlanguageapi',
+    name='firstlanguage_python',
     version='1.0.0',
     description='Python client library for FirstLanguage API',
     long_description=long_description,
     long_description_content_type="text/markdown",
-    author='Us',
+    author='FirstLanguage',
     author_email='info@firstlanguage.in',
-    url='https://dev.firstlanguage.in/contactus',
+    url='https://firstlanguage.in/contactus',
+    download_url = 'https://github.com/FirstLanguage/firstlanguage_python/archive/refs/tags/v_01.tar.gz',
+    keywords = ['FirstLanguage API', 'NLP', 'SDK', 'Python', 'Natural Language Processing'],  
     packages=find_packages(),
     install_requires=[
         'jsonpickle~=1.4, >= 1.4.1',
