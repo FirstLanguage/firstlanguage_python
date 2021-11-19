@@ -1,5 +1,5 @@
-from firstlanguage.firstlanguage_client import Client
-from firstlanguage.configuration import Environment
+from firstlanguage_python.firstlanguage_client import Client
+from firstlanguage_python.configuration import Environment
 import jsonpickle
 
 
