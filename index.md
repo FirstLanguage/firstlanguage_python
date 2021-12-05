@@ -13,7 +13,61 @@ OpenAPI syntax we use a few [vendor extensions](https://github.com/Redocly/redoc
 
 ## Building
 
-Download the FirstLanguage Python SDK from <a href="FirstLanguage_PythonSDK.zip">here</a>
+You can use the SDK either from source by cloning from GitHub using our [repo](https://github.com/FirstLanguage/firstlanguage_python.git)
+
+Or you can use PIP to install our package directly by using the command.
+
+```
+pip install firstlanguage-python
+```
+
+## Follow below steps if you want to use SDK from our PIP published package
+
+Once the package is installed you can directly use our package in your code. Below is a working example. Replace <Your_API_KEY> with your API Key from the dashboard.
+
+```
+from firstlanguage_python.firstlanguage_client import Client
+from firstlanguage_python.configuration import Environment
+import jsonpickle
+
+
+client = Client(
+    apikey='<Your_API_KEY>',
+    environment=Environment.PRODUCTION,)
+
+reqbody='{"input":{"text":"அவள் வேகமாக ஓடினாள்","lang":"ta"} }'
+
+body = jsonpickle.decode(reqbody)
+basic_api_controller = client.basic_api
+
+result = basic_api_controller.get_stemmer(body)
+
+for res in result:
+  print("Original Text passed: "+res.orginal_text)
+  print("Stemmed result: "+res.stem)
+
+
+```
+
+Save the above file as test.py and run it using the below command
+
+```
+python3 test.py
+```
+
+You will get an output like below
+
+```
+200
+Original Text passed: அவள்
+Stemmed result: அவள்
+Original Text passed: வேகமாக
+Stemmed result: வேகம்
+Original Text passed: ஓடினாள்
+Stemmed result: ஓடி
+```
+
+## Follow below steps if you want to use SDK from source
 
 You must have Python `3 >=3.7, <= 3.9` installed on your system to install and run this SDK. This SDK package depends on other Python packages like nose, jsonpickle etc. These dependencies are defined in the `requirements.txt` file that comes with the SDK. To resolve these dependencies, you can use the PIP Dependency manager. Install it by following steps at [https://pip.pypa.io/en/stable/installing/](https://pip.pypa.io/en/stable/installing/).
 
