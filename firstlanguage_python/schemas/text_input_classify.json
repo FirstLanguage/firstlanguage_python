@@ -1,0 +1,13 @@
+{
+  "id": "TextInputClassify",
+  "title": "TextInputClassify",
+  "type": "object",
+  "properties": {
+    "input": {
+      "$ref": "Input2"
+    }
+  },
+  "required": [
+    "input"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "id": "responsepo",
+  "title": "responsepo",
+  "type": "object",
+  "properties": {
+    "orginalText": {
+      "type": "string"
+    },
+    "postag": {
+      "type": "string"
+    }
+  }
+}

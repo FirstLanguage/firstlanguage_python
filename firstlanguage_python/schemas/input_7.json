@@ -1,0 +1,19 @@
+{
+  "id": "Input7",
+  "title": "Input7",
+  "type": "object",
+  "properties": {
+    "text": {
+      "description": "Named Entities will be marked from this text. Special characters will not be stripped.",
+      "type": "string"
+    },
+    "lang": {
+      "description": "Allowed language code. Refer Allowed languages section.",
+      "type": "string"
+    }
+  },
+  "required": [
+    "text",
+    "lang"
+  ]
+}

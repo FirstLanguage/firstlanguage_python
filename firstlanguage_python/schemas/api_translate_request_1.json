@@ -1,0 +1,13 @@
+{
+  "id": "Api Translate Request1",
+  "title": "Api Translate Request1",
+  "type": "object",
+  "properties": {
+    "input": {
+      "$ref": "Input12"
+    }
+  },
+  "required": [
+    "input"
+  ]
+}

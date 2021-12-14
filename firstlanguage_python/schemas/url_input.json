@@ -1,0 +1,13 @@
+{
+  "id": "URLInput",
+  "title": "URLInput",
+  "type": "object",
+  "properties": {
+    "input": {
+      "$ref": "Input1"
+    }
+  },
+  "required": [
+    "input"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "id": "TextInput",
+  "title": "TextInput",
+  "type": "object",
+  "properties": {
+    "input": {
+      "$ref": "Input.json"
+    }
+  },
+  "required": [
+    "input"
+  ]
+}

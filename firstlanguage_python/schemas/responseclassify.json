@@ -1,0 +1,21 @@
+{
+  "id": "responseclassify",
+  "title": "responseclassify",
+  "type": "object",
+  "properties": {
+    "labels": {
+      "description": "",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "scores": {
+      "description": "",
+      "type": "array",
+      "items": {
+        "type": "number"
+      }
+    }
+  }
+}

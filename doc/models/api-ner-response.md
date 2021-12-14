@@ -9,10 +9,10 @@
 
 | Name | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `entity_group` | `string` | Required | Entity group inferred.<br>**Constraints**: *Minimum Length*: `1` |
-| `word` | `string` | Required | Corresponding word<br>**Constraints**: *Minimum Length*: `1` |
-| `start` | `string` | Required | Start position of the entity in the given input.<br>**Constraints**: *Minimum Length*: `1` |
-| `end` | `string` | Required | Start position of the entity in the given input.<br>**Constraints**: *Minimum Length*: `1` |
+| `entity_group` | `string` | Required | Entity group inferred. |
+| `word` | `string` | Required | Corresponding word |
+| `start` | `string` | Required | Start position of the entity in the given input. |
+| `end` | `string` | Required | Start position of the entity in the given input. |
 
 ## Example (as JSON)
 

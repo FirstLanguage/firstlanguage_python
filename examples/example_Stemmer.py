@@ -4,7 +4,7 @@ import jsonpickle
 
 
 client = Client(
-    apikey='079cc45f-bbb2-4f01-ac27-63ff9a2d82b5',
+    apikey='63af276e-34fe-4fd5-a474-0c69847f25e1',
     environment=Environment.PRODUCTION,)
 
 reqbody='{"input":{"text":"அவள் வேகமாக ஓடினாள்","lang":"ta"} }'

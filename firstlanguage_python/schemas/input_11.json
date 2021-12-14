@@ -1,0 +1,19 @@
+{
+  "id": "Input11",
+  "title": "Input11",
+  "type": "object",
+  "properties": {
+    "text": {
+      "description": "Text for which translation should be generated",
+      "type": "string"
+    },
+    "lang": {
+      "description": "Allowed language code. Refer Allowed languages section.",
+      "type": "string"
+    }
+  },
+  "required": [
+    "text",
+    "lang"
+  ]
+}

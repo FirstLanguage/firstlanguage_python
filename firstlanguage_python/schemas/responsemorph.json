@@ -1,0 +1,10 @@
+{
+  "id": "responsemorph",
+  "title": "responsemorph",
+  "type": "object",
+  "properties": {
+    "orignalString": {
+      "$ref": "OrignalString.json"
+    }
+  }
+}

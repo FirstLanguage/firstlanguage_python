@@ -9,13 +9,16 @@
 
 | Name | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `input` | [`Input4`](/fl-python/doc/models/input-4.md) | Optional | - |
+| `input` | [`Input4`](/fl-python/doc/models/input-4.md) | Required | - |
 
 ## Example (as JSON)
 
 ```json
 {
-  "input": null
+  "input": {
+    "text": "அவள் வேகமாக ஓடினாள்",
+    "lang": "ta"
+  }
 }
 ```
 

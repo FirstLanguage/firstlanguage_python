@@ -1,0 +1,30 @@
+{
+  "id": "Api Qa Response",
+  "title": "Api Qa Response",
+  "type": "object",
+  "properties": {
+    "score": {
+      "description": "What is the confident score of the answer",
+      "type": "number"
+    },
+    "start": {
+      "description": "Start position of the answer in the context",
+      "type": "number"
+    },
+    "end": {
+      "description": "End position of the answer in the context",
+      "type": "number"
+    },
+    "answer": {
+      "description": "Answer to the question.",
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "required": [
+    "score",
+    "start",
+    "end",
+    "answer"
+  ]
+}

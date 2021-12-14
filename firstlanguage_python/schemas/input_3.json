@@ -1,0 +1,39 @@
+{
+  "id": "Input3",
+  "title": "Input3",
+  "type": "object",
+  "properties": {
+    "url": {
+      "description": "URL where the content is hosted.",
+      "example": "http://news.bbc.co.uk/2/hi/health/2284783.stm",
+      "type": "string"
+    },
+    "lang": {
+      "description": "Allowed language code. Refer Allowed languages section.",
+      "example": "en",
+      "type": "string"
+    },
+    "contentType": {
+      "description": "Allowed values or html or text. If html is specified all html tags and special characters will be stripped before processing.",
+      "example": "html",
+      "type": "string"
+    },
+    "labels": {
+      "description": "Labels to classify",
+      "example": [
+        "good",
+        "bad"
+      ],
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    }
+  },
+  "required": [
+    "url",
+    "lang",
+    "contentType",
+    "labels"
+  ]
+}

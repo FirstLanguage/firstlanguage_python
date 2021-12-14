@@ -17,6 +17,7 @@ from firstlanguage_python.models.responsemorph import Responsemorph
 from firstlanguage_python.models.responsepo import Responsepo
 from firstlanguage_python.exceptions.errors_exception import ErrorsException
 from firstlanguage_python.exceptions.api_stemmer_426_error_exception import ApiStemmer426ErrorException
+from firstlanguage_python.exceptions.api_exception import APIException
 from firstlanguage_python.exceptions.api_lemmatize_426_error_exception import ApiLemmatize426ErrorException
 from firstlanguage_python.exceptions.api_morph_426_error_exception import ApiMorph426ErrorException
 from firstlanguage_python.exceptions.api_postag_426_error_exception import ApiPostag426ErrorException
@@ -34,44 +35,45 @@ class BasicAPIsController(BaseController):
         """Does a POST request to /api/stemmer.
 
         # Stemmer : Defintion and it's usage
-         A word takes different inflectional forms. For instance, the word,
-         "Compute" can take the forms, "computing", "computation",  and
-         "computerize". The NLP applications such as Search Engines and
-         Information Extraction would want to store the base or stem of the
-         word, i.e "Compute" instead of accomodating all its inflected forms.
-         This will yield in dimensionality reduction and incerases the
-         efficiency of the system. The stemmer cuts the prefix and suffix of a
-         word. 
+        A word takes different inflectional forms. For instance, the word,
+        "Compute" can take the forms, "computing", "computation",  and
+        "computerize". The NLP applications such as Search Engines and
+        Information Extraction would want to store the base or stem of the
+        word, i.e "Compute" instead of accomodating all its inflected forms.
+        This will yield in dimensionality reduction and incerases the
+        efficiency of the system. The stemmer cuts the prefix and suffix of a
+        word. 
          # Languages covered:
-          Our stemmer works for the following  26 languages. Our stemmer works
-          using the snowball stemmer algorithm which is also known as Porter 2
-          Stemming algorithm. 
-          1. Tamil
-          2. Hindi
-          3. English
-          4. Arabic
-          5. Basque
-          6. Catalan
-          7. Danish
-          8. Dutch
-          9. Finnish
-          10.  French
-          11. German
-          12. Greek
-          13. Hungarian
-          14. Indonesian
-          15. Irish
-          16. Italian
-          17. Lithuanian
-          18. Nepali
-          19. Norwegian
-          20. Portuguese
-          21. Romanian
-          22. Russian
-          23. Serbian
-          24. Spanish
-          25. Swedish
-          26. Turkish
+          Our stemmer works for the following  26 languages. 
+          
+        | Languages    | ISO Code   |
+        |--------------|------------|
+        |  Arabic      |  ar        |
+        |  Catalan     |  ca        |
+        |  Danish      |  da        |
+        |  German      |  de        |
+        |  Greek       |  el        |
+        |  English     |  en        |
+        |  Spanish     |  es        |
+        |  Basque      |  eu        |
+        |  Finnish     |  fi        |
+        |  French      |  fr        |
+        |  Irish       |  ga        |
+        |  Hindi       |  hi        |
+        |  Hungarian   |  hu        |
+        |  Indonesian  |  id        |
+        |  Italian     |  it        |
+        |  Lithuanian  |  lt        |
+        |  Nepali      |  ne        |
+        |  Dutch       |  nl        |
+        |  Norwegian   |  no        |
+        |  Portuguese  |  pt        |
+        |  Romanian    |  ro        |
+        |  Russian     |  ru        |
+        |  Serbian     |  sr        |
+        |  Swedish     |  sv        |
+        |  Tamil       |  ta        |
+        |  Turkish     |  tr        |
 
         Args:
             body (object): Add a JSON Input as per the schema defined below
@@ -109,6 +111,8 @@ class BasicAPIsController(BaseController):
             raise ErrorsException('Error output', _response)
         elif _response.status_code == 426:
             raise ApiStemmer426ErrorException('Please use HTTPS protocol', _response)
+        elif _response.status_code == 429:
+            raise APIException('Too Many Requests', _response)
         self.validate_response(_response)
 
         decoded = APIHelper.json_deserialize(_response.text, Responsestem.from_dictionary)
@@ -119,8 +123,33 @@ class BasicAPIsController(BaseController):
                   body):
         """Does a POST request to /api/lemmatize.
 
-        # Stemmer : Defintion and it's usage
+        # Lemmatizer : Defintion and it's usage
+        Lemmatizer is similar to stemmer that gives the stemmed version of a
+        word but lemmatizer differs from the stemmer in giving a meaningful
+        stem or the lemma. For instance, for the word, "smiling", the stemmer
+        would give, "smil", stemming the suffix, "ing" but the lemmatizer
+        would give the meaningful stem, "smile". lemmatizers can be used in
+        applications such as,  Machine Translation, Search Engines, Text
+        Summarization etc.
         # Languages covered:
+        | Languages          | ISO Code |
+        |--------------------|----------|
+        | Catalan            | ca       |
+        | Danish             | da       |
+        | Dutch              | nl       |
+        | English            | en       |
+        | French             | fr       |
+        | German             | de       |
+        | Greek              | el       |
+        | Italian            | it       |
+        | Lithuanian         | lt       |
+        | Macedonian         | mk       |
+        | Norwegian (Bokmål) | nb       |
+        | Polish             | pl       |
+        | Portuguese         | pt       |
+        | Romanian           | ro       |
+        | Russian            | ru       |
+        | Spanish            | es       |
 
         Args:
             body (object): Add a JSON Input as per the schema defined below
@@ -158,6 +187,8 @@ class BasicAPIsController(BaseController):
             raise ErrorsException('Error output', _response)
         elif _response.status_code == 426:
             raise ApiLemmatize426ErrorException('Please use HTTPS protocol', _response)
+        elif _response.status_code == 429:
+            raise APIException('Too Many Requests', _response)
         self.validate_response(_response)
 
         decoded = APIHelper.json_deserialize(_response.text, Responselemma.from_dictionary)
@@ -168,8 +199,31 @@ class BasicAPIsController(BaseController):
                   body):
         """Does a POST request to /api/morph.
 
-        # Stemmer : Defintion and it's usage
+        # Morphological Analyzer : Defintion and it's usage
+        Morphological Analyzer analyzes how a word is formed. It breaks a word
+        into smaller units called, "morphemes" and gives a clue on the pattern
+        of words of a particular langauge.  It can be used for building
+        applications such as,  Machine Translation, Text Summarization, Search
+        systems etc. 
         # Languages covered:
+        | Languages          | ISO Code |
+        |--------------------|----------|
+        | Catalan            | ca       |
+        | Danish             | da       |
+        | Dutch              | nl       |
+        | English            | en       |
+        | French             | fr       |
+        | German             | de       |
+        | Greek              | el       |
+        | Italian            | it       |
+        | Japanese           | ja       |
+        | Lithuanian         | lt       |
+        | Macedonian         | mk       |
+        | Norwegian (Bokmål) | nb       |
+        | Polish             | pl       |
+        | Portuguese         | pt       |
+        | Russian            | ru       |
+        | Spanish            | es       |
 
         Args:
             body (object): Add a JSON Input as per the schema defined below
@@ -207,6 +261,8 @@ class BasicAPIsController(BaseController):
             raise ErrorsException('Error output', _response)
         elif _response.status_code == 426:
             raise ApiMorph426ErrorException('Please use HTTPS protocol', _response)
+        elif _response.status_code == 429:
+            raise APIException('Too Many Requests', _response)
         self.validate_response(_response)
 
         decoded = APIHelper.json_deserialize(_response.text, Responsemorph.from_dictionary)
@@ -217,27 +273,33 @@ class BasicAPIsController(BaseController):
                    body):
         """Does a POST request to /api/postag.
 
-         **So, What is a POS Tagger?**
-          Parts Of Speech Tagger, which is shortly known as POS Tagger is a
+         # Parts of Speech Tagger : Defintion and it's usage
+          Parts of Speech Tagger, which is shortly known as POS Tagger is a
           software that automatically finds the word classes, when a text
           input is given. The text input can be a word, a sentence or a set of
           sentences. The word classes are the grammatical categories such as,
-          Noun, Verb, Adverb etc. These category assigned to each word is a
-          tag. A set of tags, each indicating a grammatical category is
-          called, "tagsets". POS tagging is a mandatory pre processing for
+          Noun, Verb, Adverb etc. The category assigned to each word is called
+          as a tag. A set of tags, each indicating a grammatical category is
+          called, "tagsets". POS tagging is a mandatory pre-processing for
           most of the Natural Language Processing Applications such as,
           Information Extraction, Information Retreival systems and Summary
-          generation systems.
-        **Is POS Tagger, a language-independent software?**
-        No. A POS Tagger is a language-dependent software as the grammar rules
-        will differ for every language. For instance, A word ending with "ing"
-        might indicate a Verb" in English but this will not be applicable for
-        other languages.
-        **For what languages, our  POS Tagger API will work?**
-        At present, our POS Tagger API works for English and Tami Languages.
-        Soon we will extend the APIs to accomodate more languages. 
-        **How Precise are our POS Tagger API?**
-        will update accuracy metrics soon .....
+          generation systems. A POS Tagger is a language-dependent software as
+          the grammar rules will differ for every language. For instance, a
+          word ending with "ing" might indicate a "Verb" in English but this
+          will not be applicable for other languages. 
+        # Languages covered:
+        | Languages          | ISO Code |
+        |--------------------|----------|
+        | Chinese            | zh       |
+        | Dutch              | nl       |
+        | English            | en       |
+        | German             | de       |
+        | Italian            | it       |
+        | Lithuanian         | lt       |
+        | Polish             | pl       |
+        | Romanian           | ro       |
+        | Tamil              | ta       |
+         
 
         Args:
             body (object): Add a JSON Input as per the schema defined below
@@ -275,6 +337,8 @@ class BasicAPIsController(BaseController):
             raise ErrorsException('Error output', _response)
         elif _response.status_code == 426:
             raise ApiPostag426ErrorException('Please use HTTPS protocol', _response)
+        elif _response.status_code == 429:
+            raise APIException('Too Many Requests', _response)
         self.validate_response(_response)
 
         decoded = APIHelper.json_deserialize(_response.text, Responsepo.from_dictionary)

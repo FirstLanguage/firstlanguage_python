@@ -1,0 +1,29 @@
+{
+  "id": "Api Ner Response",
+  "title": "Api Ner Response",
+  "type": "object",
+  "properties": {
+    "entity_group": {
+      "description": "Entity group inferred.",
+      "type": "string"
+    },
+    "word": {
+      "description": "Corresponding word",
+      "type": "string"
+    },
+    "start": {
+      "description": "Start position of the entity in the given input.",
+      "type": "string"
+    },
+    "end": {
+      "description": "Start position of the entity in the given input.",
+      "type": "string"
+    }
+  },
+  "required": [
+    "entity_group",
+    "word",
+    "start",
+    "end"
+  ]
+}

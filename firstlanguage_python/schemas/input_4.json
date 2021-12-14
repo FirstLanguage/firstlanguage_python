@@ -1,0 +1,21 @@
+{
+  "id": "Input4",
+  "title": "Input4",
+  "type": "object",
+  "properties": {
+    "text": {
+      "description": "Word or sentence or a paragraph. Special characters will not be stripped.",
+      "example": "அவள் வேகமாக ஓடினாள்",
+      "type": "string"
+    },
+    "lang": {
+      "description": "Allowed ISO language code. Refer languages section.",
+      "example": "ta",
+      "type": "string"
+    }
+  },
+  "required": [
+    "text",
+    "lang"
+  ]
+}

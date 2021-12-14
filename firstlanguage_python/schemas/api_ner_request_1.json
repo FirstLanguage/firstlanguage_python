@@ -1,0 +1,13 @@
+{
+  "id": "Api Ner Request1",
+  "title": "Api Ner Request1",
+  "type": "object",
+  "properties": {
+    "input": {
+      "$ref": "Input8"
+    }
+  },
+  "required": [
+    "input"
+  ]
+}

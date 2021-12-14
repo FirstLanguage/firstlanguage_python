@@ -9,19 +9,22 @@
 
 | Name | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `url` | `string` | Optional | URL where the content is hosted. |
-| `lang` | `string` | Optional | Allowed language code. Refer Allowed languages section. |
-| `content_type` | `string` | Optional | Allowed values or html or text. If html is specified all html tags and special characters will be stripped before processing. |
-| `labels` | `List of object` | Optional | Labels to classify |
+| `url` | `string` | Required | URL where the content is hosted. |
+| `lang` | `string` | Required | Allowed language code. Refer Allowed languages section. |
+| `content_type` | `string` | Required | Allowed values or html or text. If html is specified all html tags and special characters will be stripped before processing. |
+| `labels` | `List of object` | Required | Labels to classify |
 
 ## Example (as JSON)
 
 ```json
 {
-  "url": null,
-  "lang": null,
-  "contentType": null,
-  "labels": null
+  "url": "http://news.bbc.co.uk/2/hi/health/2284783.stm",
+  "lang": "en",
+  "contentType": "html",
+  "labels": [
+    "good",
+    "bad"
+  ]
 }
 ```
 

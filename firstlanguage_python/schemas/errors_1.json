@@ -1,0 +1,16 @@
+{
+  "id": "Errors1",
+  "title": "Errors1",
+  "type": "object",
+  "properties": {
+    "msg": {
+      "type": "string"
+    },
+    "param": {
+      "type": "string"
+    },
+    "location": {
+      "type": "string"
+    }
+  }
+}

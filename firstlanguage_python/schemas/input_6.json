@@ -1,0 +1,29 @@
+{
+  "id": "Input6",
+  "title": "Input6",
+  "type": "object",
+  "properties": {
+    "question": {
+      "description": "Question to be answered from the context given. Only One question can be asked at a time. Special characters will not be stripped.",
+      "type": "string"
+    },
+    "lang": {
+      "description": "Allowed language code. Refer Allowed languages section.",
+      "type": "string"
+    },
+    "contentType": {
+      "description": "Allowed values or html or text. If html is specified all html tags and special characters will be stripped before processing.",
+      "type": "string"
+    },
+    "url": {
+      "description": "URL where the context for the question is stored.",
+      "type": "string"
+    }
+  },
+  "required": [
+    "question",
+    "lang",
+    "contentType",
+    "url"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "id": "Api Qa Request1",
+  "title": "Api Qa Request1",
+  "type": "object",
+  "properties": {
+    "input": {
+      "$ref": "Input6"
+    }
+  },
+  "required": [
+    "input"
+  ]
+}

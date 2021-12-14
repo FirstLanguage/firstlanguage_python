@@ -1,0 +1,13 @@
+{
+  "id": "TextInputTamil",
+  "title": "TextInputTamil",
+  "type": "object",
+  "properties": {
+    "input": {
+      "$ref": "Input4"
+    }
+  },
+  "required": [
+    "input"
+  ]
+}

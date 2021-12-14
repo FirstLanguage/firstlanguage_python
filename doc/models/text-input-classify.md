@@ -9,13 +9,20 @@
 
 | Name | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `input` | [`Input2`](/fl-python/doc/models/input-2.md) | Optional | - |
+| `input` | [`Input2`](/fl-python/doc/models/input-2.md) | Required | - |
 
 ## Example (as JSON)
 
 ```json
 {
-  "input": null
+  "input": {
+    "context": "Let us begin the API development.",
+    "lang": "en",
+    "labels": [
+      "good",
+      "bad"
+    ]
+  }
 }
 ```
 

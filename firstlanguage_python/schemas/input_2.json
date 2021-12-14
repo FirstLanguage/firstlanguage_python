@@ -1,0 +1,33 @@
+{
+  "id": "Input2",
+  "title": "Input2",
+  "type": "object",
+  "properties": {
+    "context": {
+      "description": "Word or sentence or a paragraph. Special characters will not be stripped.",
+      "example": "Let us begin the API development.",
+      "type": "string"
+    },
+    "lang": {
+      "description": "Allowed language code. Refer Allowed languages section.",
+      "example": "en",
+      "type": "string"
+    },
+    "labels": {
+      "description": "Labels to classify",
+      "example": [
+        "good",
+        "bad"
+      ],
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    }
+  },
+  "required": [
+    "context",
+    "lang",
+    "labels"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "id": "Api Translate Response",
+  "title": "Api Translate Response",
+  "type": "object",
+  "properties": {
+    "generated_text": {
+      "type": "string"
+    }
+  }
+}

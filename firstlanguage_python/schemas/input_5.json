@@ -1,0 +1,24 @@
+{
+  "id": "Input5",
+  "title": "Input5",
+  "type": "object",
+  "properties": {
+    "question": {
+      "description": "Question to be answered from the context given. Only One question can be asked at a time. Special characters will not be stripped.",
+      "type": "string"
+    },
+    "lang": {
+      "description": "Allowed language code. Refer Allowed languages section.",
+      "type": "string"
+    },
+    "context": {
+      "description": "Sentence or a paragraph. Special characters will not be stripped.",
+      "type": "string"
+    }
+  },
+  "required": [
+    "question",
+    "lang",
+    "context"
+  ]
+}

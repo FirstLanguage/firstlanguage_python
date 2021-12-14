@@ -1,0 +1,13 @@
+{
+  "id": "responsestem",
+  "title": "responsestem",
+  "type": "object",
+  "properties": {
+    "orginalText": {
+      "type": "string"
+    },
+    "stem": {
+      "type": "string"
+    }
+  }
+}

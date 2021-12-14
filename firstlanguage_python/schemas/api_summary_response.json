@@ -1,0 +1,10 @@
+{
+  "id": "Api Summary Response",
+  "title": "Api Summary Response",
+  "type": "object",
+  "properties": {
+    "summary": {
+      "type": "string"
+    }
+  }
+}

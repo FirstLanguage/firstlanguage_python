@@ -1,0 +1,22 @@
+{
+  "id": "Input",
+  "title": "Input",
+  "description": "Direct Text Input",
+  "type": "object",
+  "properties": {
+    "text": {
+      "description": "Word or sentence or a paragraph. Special characters will not be stripped.",
+      "example": "Let us begin the API development.",
+      "type": "string"
+    },
+    "lang": {
+      "description": "Allowed language code. Refer Allowed languages section.",
+      "example": "en",
+      "type": "string"
+    }
+  },
+  "required": [
+    "text",
+    "lang"
+  ]
+}

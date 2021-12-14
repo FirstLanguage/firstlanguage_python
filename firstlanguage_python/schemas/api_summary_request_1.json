@@ -1,0 +1,13 @@
+{
+  "id": "Api Summary Request1",
+  "title": "Api Summary Request1",
+  "type": "object",
+  "properties": {
+    "input": {
+      "$ref": "Input10"
+    }
+  },
+  "required": [
+    "input"
+  ]
+}

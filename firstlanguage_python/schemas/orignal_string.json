@@ -1,0 +1,14 @@
+{
+  "id": "OrignalString",
+  "title": "OrignalString",
+  "type": "object",
+  "properties": {
+    "morph_attr": {
+      "description": "",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}
