@@ -4,22 +4,22 @@ import sys
 from setuptools import setup, find_packages
 
 if sys.version_info[0] < 3:
-    with open('README.md', 'r') as fh:
+    with open('README.html', 'r') as fh:
         long_description = fh.read()
 else:
-    with open('README.md', 'r', encoding='utf-8') as fh:
+    with open('README.html', 'r', encoding='utf-8') as fh:
         long_description = fh.read()
 
 setup(
     name='firstlanguage_python',
-    version='1.0.0',
+    version='1.0.1',
     description='Python client library for FirstLanguage API',
     long_description=long_description,
     long_description_content_type="text/markdown",
     author='FirstLanguage',
     author_email='info@firstlanguage.in',
-    url='https://firstlanguage.in/contactus',
-    download_url = 'https://github.com/FirstLanguage/firstlanguage_python/archive/refs/tags/v_01.tar.gz',
+    url='https://www.firstlanguage.in/contactus',
+    download_url = 'https://github.com/FirstLanguage/firstlanguage_python/archive/refs/tags/v_1.tar.gz',
     keywords = ['FirstLanguage API', 'NLP', 'SDK', 'Python', 'Natural Language Processing'],  
     packages=find_packages(),
     install_requires=[
@@ -27,7 +27,8 @@ setup(
         'requests~=2.24',
         'cachecontrol~=0.12.6',
         'python-dateutil~=2.8.1',
-        'enum34~=1.1, >=1.1.10'
+        'enum34~=1.1, >=1.1.10',
+        'jsonschema~=3.2.0'
     ],
     tests_require=[
         'nose>=1.3.7'

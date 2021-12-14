@@ -12,10 +12,10 @@ basic_api_controller = client.basic_api
 
 ## Methods
 
-* [Get Stemmer](/fl-python/doc/controllers/basic-api.md#get-stemmer)
-* [Get Lemma](/fl-python/doc/controllers/basic-api.md#get-lemma)
-* [Get Morph](/fl-python/doc/controllers/basic-api.md#get-morph)
-* [Get Postag](/fl-python/doc/controllers/basic-api.md#get-postag)
+* [Get Stemmer](/firstlanguage_python/doc/controllers/basic-api.html#get-stemmer)
+* [Get Lemma](/firstlanguage_python/doc/controllers/basic-api.html#get-lemma)
+* [Get Morph](/firstlanguage_python/doc/controllers/basic-api.html#get-morph)
+* [Get Postag](/firstlanguage_python/doc/controllers/basic-api.html#get-postag)
 
 
 # Get Stemmer
@@ -70,7 +70,7 @@ def get_stemmer(self,
 
 ## Response Type
 
-[`List of Responsestem`](/fl-python/doc/models/responsestem.md)
+[`List of Responsestem`](/firstlanguage_python/doc/models/responsestem.html)
 
 ## Example Usage
 
@@ -103,8 +103,8 @@ result = basic_api_controller.get_stemmer(body)
 
 | HTTP Status Code | Error Description | Exception Class |
 |  --- | --- | --- |
-| 400 | Error output | [`ErrorsException`](/fl-python/doc/models/errors-exception.md) |
-| 426 | Please use HTTPS protocol | [`ApiStemmer426ErrorException`](/fl-python/doc/models/api-stemmer-426-error-exception.md) |
+| 400 | Error output | [`ErrorsException`](/firstlanguage_python/doc/models/errors-exception.html) |
+| 426 | Please use HTTPS protocol | [`ApiStemmer426ErrorException`](/firstlanguage_python/doc/models/api-stemmer-426-error-exception.html) |
 | 429 | Too Many Requests | `APIException` |
 
 
@@ -148,7 +148,7 @@ def get_lemma(self,
 
 ## Response Type
 
-[`List of Responselemma`](/fl-python/doc/models/responselemma.md)
+[`List of Responselemma`](/firstlanguage_python/doc/models/responselemma.html)
 
 ## Example Usage
 
@@ -185,8 +185,8 @@ result = basic_api_controller.get_lemma(body)
 
 | HTTP Status Code | Error Description | Exception Class |
 |  --- | --- | --- |
-| 400 | Error output | [`ErrorsException`](/fl-python/doc/models/errors-exception.md) |
-| 426 | Please use HTTPS protocol | [`ApiLemmatize426ErrorException`](/fl-python/doc/models/api-lemmatize-426-error-exception.md) |
+| 400 | Error output | [`ErrorsException`](/firstlanguage_python/doc/models/errors-exception.html) |
+| 426 | Please use HTTPS protocol | [`ApiLemmatize426ErrorException`](/firstlanguage_python/doc/models/api-lemmatize-426-error-exception.html) |
 | 429 | Too Many Requests | `APIException` |
 
 
@@ -230,7 +230,7 @@ def get_morph(self,
 
 ## Response Type
 
-[`Responsemorph`](/fl-python/doc/models/responsemorph.md)
+[`Responsemorph`](/firstlanguage_python/doc/models/responsemorph.html)
 
 ## Example Usage
 
@@ -412,8 +412,8 @@ result = basic_api_controller.get_morph(body)
 
 | HTTP Status Code | Error Description | Exception Class |
 |  --- | --- | --- |
-| 400 | Error output | [`ErrorsException`](/fl-python/doc/models/errors-exception.md) |
-| 426 | Please use HTTPS protocol | [`ApiMorph426ErrorException`](/fl-python/doc/models/api-morph-426-error-exception.md) |
+| 400 | Error output | [`ErrorsException`](/firstlanguage_python/doc/models/errors-exception.html) |
+| 426 | Please use HTTPS protocol | [`ApiMorph426ErrorException`](/firstlanguage_python/doc/models/api-morph-426-error-exception.html) |
 | 429 | Too Many Requests | `APIException` |
 
 
@@ -450,7 +450,7 @@ def get_postag(self,
 
 ## Response Type
 
-[`List of Responsepo`](/fl-python/doc/models/responsepo.md)
+[`List of Responsepo`](/firstlanguage_python/doc/models/responsepo.html)
 
 ## Example Usage
 
@@ -499,7 +499,7 @@ result = basic_api_controller.get_postag(body)
 
 | HTTP Status Code | Error Description | Exception Class |
 |  --- | --- | --- |
-| 400 | Error output | [`ErrorsException`](/fl-python/doc/models/errors-exception.md) |
-| 426 | Please use HTTPS protocol | [`ApiPostag426ErrorException`](/fl-python/doc/models/api-postag-426-error-exception.md) |
+| 400 | Error output | [`ErrorsException`](/firstlanguage_python/doc/models/errors-exception.html) |
+| 426 | Please use HTTPS protocol | [`ApiPostag426ErrorException`](/firstlanguage_python/doc/models/api-postag-426-error-exception.html) |
 | 429 | Too Many Requests | `APIException` |
 

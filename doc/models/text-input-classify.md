@@ -9,7 +9,7 @@
 
 | Name | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `input` | [`Input2`](/fl-python/doc/models/input-2.md) | Required | - |
+| `input` | [`Input2`](/firstlanguage_python/doc/models/input-2.html) | Required | - |
 
 ## Example (as JSON)
 

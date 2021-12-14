@@ -9,7 +9,7 @@ Collection of NLP APIs to help developers. We have grouped the APIs under Basic 
 
 This API is documented in **OpenAPI v3.0 format**.
 In addition to standard
-OpenAPI syntax we use a few [vendor extensions](https://github.com/Redocly/redoc/blob/master/docs/redoc-vendor-extensions.md).
+OpenAPI syntax we use a few [vendor extensions](https://github.com/Redocly/redoc/blob/master/docs/redoc-vendor-extensions.html).
 
 ## Building
 
@@ -143,7 +143,7 @@ nosetests
 
 ## Initialize the API Client
 
-**_Note:_** Documentation for the client can be found [here.](/doc/client.md)
+**_Note:_** Documentation for the client can be found [here.](/doc/client.html)
 
 The following parameters are configurable for the API Client:
 
@@ -175,12 +175,12 @@ This API uses `Custom Header Signature`.
 
 ## List of APIs
 
-* [Basic APIs](/doc/controllers/basic-api.md)
-* [Advanced APIs](/doc/controllers/advanced-api.md)
+* [Basic APIs](/doc/controllers/basic-api.html)
+* [Advanced APIs](/doc/controllers/advanced-api.html)
 
 ## Classes Documentation
 
-* [Utility Classes](/doc/utility-classes.md)
-* [HttpResponse](/doc/http-response.md)
-* [HttpRequest](/doc/http-request.md)
+* [Utility Classes](/doc/utility-classes.html)
+* [HttpResponse](/doc/http-response.html)
+* [HttpRequest](/doc/http-request.html)
 

@@ -9,7 +9,7 @@
 
 | Name | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `orignal_string` | [`OrignalString`](/fl-python/doc/models/orignal-string.md) | Optional | - |
+| `orignal_string` | [`OrignalString`](/firstlanguage_python/doc/models/orignal-string.html) | Optional | - |
 
 ## Example (as JSON)
 

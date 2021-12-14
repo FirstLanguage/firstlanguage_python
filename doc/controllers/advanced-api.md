@@ -12,11 +12,11 @@ advanced_api_controller = client.advanced_api
 
 ## Methods
 
-* [Get Classification](/fl-python/doc/controllers/advanced-api.md#get-classification)
-* [Get QA](/fl-python/doc/controllers/advanced-api.md#get-qa)
-* [Get NER](/fl-python/doc/controllers/advanced-api.md#get-ner)
-* [Get Summary](/fl-python/doc/controllers/advanced-api.md#get-summary)
-* [Get Translate](/fl-python/doc/controllers/advanced-api.md#get-translate)
+* [Get Classification](/firstlanguage_python/doc/controllers/advanced-api.html#get-classification)
+* [Get QA](/firstlanguage_python/doc/controllers/advanced-api.html#get-qa)
+* [Get NER](/firstlanguage_python/doc/controllers/advanced-api.html#get-ner)
+* [Get Summary](/firstlanguage_python/doc/controllers/advanced-api.html#get-summary)
+* [Get Translate](/firstlanguage_python/doc/controllers/advanced-api.html#get-translate)
 
 
 # Get Classification
@@ -58,7 +58,7 @@ def get_classification(self,
 
 ## Response Type
 
-[`Responseclassify`](/fl-python/doc/models/responseclassify.md)
+[`Responseclassify`](/firstlanguage_python/doc/models/responseclassify.html)
 
 ## Example Usage
 
@@ -87,8 +87,8 @@ result = advanced_api_controller.get_classification(body)
 
 | HTTP Status Code | Error Description | Exception Class |
 |  --- | --- | --- |
-| 400 | Error output | [`ErrorsException`](/fl-python/doc/models/errors-exception.md) |
-| 426 | Please use HTTPS protocol | [`ApiClassify426ErrorException`](/fl-python/doc/models/api-classify-426-error-exception.md) |
+| 400 | Error output | [`ErrorsException`](/firstlanguage_python/doc/models/errors-exception.html) |
+| 426 | Please use HTTPS protocol | [`ApiClassify426ErrorException`](/firstlanguage_python/doc/models/api-classify-426-error-exception.html) |
 | 429 | Too Many Requests | `APIException` |
 
 
@@ -113,7 +113,7 @@ def get_qa(self,
 
 ## Response Type
 
-[`ApiQaResponse`](/fl-python/doc/models/api-qa-response.md)
+[`ApiQaResponse`](/firstlanguage_python/doc/models/api-qa-response.html)
 
 ## Example Usage
 
@@ -137,8 +137,8 @@ result = advanced_api_controller.get_qa(body)
 
 | HTTP Status Code | Error Description | Exception Class |
 |  --- | --- | --- |
-| 400 | Bad Request | [`ErrorsException`](/fl-python/doc/models/errors-exception.md) |
-| 426 | Please use HTTPS protocol | [`M426ErrorException`](/fl-python/doc/models/m426-error-exception.md) |
+| 400 | Bad Request | [`ErrorsException`](/firstlanguage_python/doc/models/errors-exception.html) |
+| 426 | Please use HTTPS protocol | [`M426ErrorException`](/firstlanguage_python/doc/models/m426-error-exception.html) |
 | 429 | Too Many Requests | `APIException` |
 
 
@@ -179,7 +179,7 @@ def get_ner(self,
 
 ## Response Type
 
-[`List of ApiNerResponse`](/fl-python/doc/models/api-ner-response.md)
+[`List of ApiNerResponse`](/firstlanguage_python/doc/models/api-ner-response.html)
 
 ## Example Usage
 
@@ -211,8 +211,8 @@ result = advanced_api_controller.get_ner(body)
 
 | HTTP Status Code | Error Description | Exception Class |
 |  --- | --- | --- |
-| 400 | Bad Request | [`ErrorsException`](/fl-python/doc/models/errors-exception.md) |
-| 426 | Please use HTTPS protocol | [`M426ErrorException`](/fl-python/doc/models/m426-error-exception.md) |
+| 400 | Bad Request | [`ErrorsException`](/firstlanguage_python/doc/models/errors-exception.html) |
+| 426 | Please use HTTPS protocol | [`M426ErrorException`](/firstlanguage_python/doc/models/m426-error-exception.html) |
 | 429 | Too Many Requests | `APIException` |
 
 
@@ -280,7 +280,7 @@ def get_summary(self,
 
 ## Response Type
 
-[`ApiSummaryResponse`](/doc/models/api-summary-response.md)
+[`ApiSummaryResponse`](/doc/models/api-summary-response.html)
 
 ## Example Usage
 
@@ -302,8 +302,8 @@ result = advanced_ap_is_controller.get_summary(body)
 
 | HTTP Status Code | Error Description | Exception Class |
 |  --- | --- | --- |
-| 400 | Bad Request | [`ErrorsException`](/doc/models/errors-exception.md) |
-| 426 | Please use HTTPS protocol | [`M426ErrorException`](/doc/models/m426-error-exception.md) |
+| 400 | Bad Request | [`ErrorsException`](/doc/models/errors-exception.html) |
+| 426 | Please use HTTPS protocol | [`M426ErrorException`](/doc/models/m426-error-exception.html) |
 | 429 | Too Many Requests | `APIException` |
 
 
@@ -387,7 +387,7 @@ def get_translate(self,
 
 ## Response Type
 
-[`ApiTranslateResponse`](/doc/models/api-translate-response.md)
+[`ApiTranslateResponse`](/doc/models/api-translate-response.html)
 
 ## Example Usage
 
@@ -409,7 +409,7 @@ result = advanced_ap_is_controller.get_translate(body)
 
 | HTTP Status Code | Error Description | Exception Class |
 |  --- | --- | --- |
-| 400 | Bad Request | [`ErrorsException`](/doc/models/errors-exception.md) |
-| 426 | Please use HTTPS protocol | [`M426ErrorException`](/doc/models/m426-error-exception.md) |
+| 400 | Bad Request | [`ErrorsException`](/doc/models/errors-exception.html) |
+| 426 | Please use HTTPS protocol | [`M426ErrorException`](/doc/models/m426-error-exception.html) |
 | 429 | Too Many Requests | `APIException` |
 

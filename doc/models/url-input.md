@@ -9,7 +9,7 @@
 
 | Name | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `input` | [`Input1`](/fl-python/doc/models/input-1.md) | Required | Text for processing will be read from the given URL. Only HTML pages or text pages will be processed at this time. |
+| `input` | [`Input1`](/firstlanguage_python/doc/models/input-1.html) | Required | Text for processing will be read from the given URL. Only HTML pages or text pages will be processed at this time. |
 
 ## Example (as JSON)
 
