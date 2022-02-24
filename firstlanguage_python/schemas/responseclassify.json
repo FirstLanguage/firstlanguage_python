@@ -1,6 +1,9 @@
 {
   "id": "responseclassify",
   "title": "responseclassify",
+  "extensions": {
+    "x-internal": true
+  },
   "type": "object",
   "properties": {
     "labels": {

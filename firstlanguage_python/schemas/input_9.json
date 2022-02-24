@@ -3,17 +3,17 @@
   "title": "Input9",
   "type": "object",
   "properties": {
-    "text": {
-      "description": "Text for which summary should be generated",
+    "question": {
+      "description": "Question to be answered from the context loaded in memory",
       "type": "string"
     },
     "lang": {
-      "description": "Allowed language code. Refer Allowed languages section.",
+      "description": "Language of the question",
       "type": "string"
     }
   },
   "required": [
-    "text",
+    "question",
     "lang"
   ]
 }

@@ -1,0 +1,24 @@
+{
+  "id": "Input15",
+  "title": "Input15",
+  "type": "object",
+  "properties": {
+    "lang": {
+      "description": "Allowed language code. Refer Allowed languages section.",
+      "type": "string"
+    },
+    "contentType": {
+      "description": "Allowed values or html or text. If html is specified all html tags and special characters will be stripped before processing.",
+      "type": "string"
+    },
+    "url": {
+      "description": "Text from this URL will be read and a translation generated",
+      "type": "string"
+    }
+  },
+  "required": [
+    "lang",
+    "contentType",
+    "url"
+  ]
+}

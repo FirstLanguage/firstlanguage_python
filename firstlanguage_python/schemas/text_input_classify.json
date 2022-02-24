@@ -1,6 +1,9 @@
 {
   "id": "TextInputClassify",
   "title": "TextInputClassify",
+  "extensions": {
+    "x-internal": true
+  },
   "type": "object",
   "properties": {
     "input": {

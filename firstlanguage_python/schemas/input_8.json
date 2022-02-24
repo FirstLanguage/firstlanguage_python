@@ -3,22 +3,25 @@
   "title": "Input8",
   "type": "object",
   "properties": {
-    "lang": {
-      "description": "Allowed language code. Refer Allowed languages section.",
-      "type": "string"
-    },
-    "contentType": {
-      "description": "Allowed values or html or text. If html is specified all html tags and special characters will be stripped before processing.",
-      "type": "string"
-    },
     "url": {
-      "description": "URL where the text for the NER task is stored.",
+      "description": "URL of the CSV file.",
       "type": "string"
+    },
+    "sendBackRows": {
+      "description": "Send back original rows from which the answer was extracted. Input either true or false.",
+      "type": "boolean"
+    },
+    "questions": {
+      "description": "Array of questions",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
     }
   },
   "required": [
-    "lang",
-    "contentType",
-    "url"
+    "url",
+    "sendBackRows",
+    "questions"
   ]
 }

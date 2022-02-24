@@ -1,6 +1,24 @@
 {
   "id": "Api Summary Response",
   "title": "Api Summary Response",
+  "extensions": {
+    "x-examples": {
+      "example-1": [
+        {
+          "entity_group": "PER",
+          "word": "محمد",
+          "start": "4",
+          "end": "9"
+        },
+        {
+          "entity_group": "LOC",
+          "word": "برلين",
+          "start": "18",
+          "end": "24"
+        }
+      ]
+    }
+  },
   "type": "object",
   "properties": {
     "summary": {

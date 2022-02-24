@@ -1,0 +1,23 @@
+{
+  "id": "Api Question Request",
+  "title": "Api Question Request",
+  "extensions": {
+    "x-examples": {
+      "example-1": {
+        "input": {
+          "question": "Who is father of Arya Stark?",
+          "lang": "en"
+        }
+      }
+    }
+  },
+  "type": "object",
+  "properties": {
+    "input": {
+      "$ref": "Input9"
+    }
+  },
+  "required": [
+    "input"
+  ]
+}

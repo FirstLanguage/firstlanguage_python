@@ -12,8 +12,18 @@ reqbody='{"input":{"text":"அவள் வேகமாக ஓடினாள்
 body = jsonpickle.decode(reqbody)
 basic_api_controller = client.basic_api
 
+advanced_api_controller = client.advanced_api
+
 result = basic_api_controller.get_stemmer(body)
 
 for res in result:
   print("Original Text passed: "+res.orginal_text)
   print("Stemmed result: "+res.stem)
+
+reqbody='{"input":{"text":"Welcome to Google and FirstLanguage","lang":"ta"} }'
+
+body = jsonpickle.decode(reqbody)
+
+result = advanced_api_controller.get_translate(body)
+
+print(result)

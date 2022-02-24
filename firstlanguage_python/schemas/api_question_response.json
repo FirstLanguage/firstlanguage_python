@@ -1,0 +1,24 @@
+{
+  "id": "Api Question Response",
+  "title": "Api Question Response",
+  "extensions": {
+    "x-examples": {
+      "example-1": {
+        "score": 0.028566665947437286,
+        "start": 0,
+        "end": 20,
+        "answer": "உப்பு, புளி, மிளகாய்"
+      }
+    }
+  },
+  "type": "object",
+  "properties": {
+    "answer": {
+      "description": "Answer to the question.",
+      "type": "string"
+    }
+  },
+  "required": [
+    "answer"
+  ]
+}

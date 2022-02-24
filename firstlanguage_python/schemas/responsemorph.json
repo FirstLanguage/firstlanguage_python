@@ -1,6 +1,9 @@
 {
   "id": "responsemorph",
   "title": "responsemorph",
+  "extensions": {
+    "x-internal": true
+  },
   "type": "object",
   "properties": {
     "orignalString": {

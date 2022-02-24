@@ -1,6 +1,9 @@
 {
   "id": "URLInputClassify",
   "title": "URLInputClassify",
+  "extensions": {
+    "x-internal": true
+  },
   "type": "object",
   "properties": {
     "input": {

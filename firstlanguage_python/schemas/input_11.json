@@ -3,17 +3,22 @@
   "title": "Input11",
   "type": "object",
   "properties": {
-    "text": {
-      "description": "Text for which translation should be generated",
-      "type": "string"
-    },
     "lang": {
       "description": "Allowed language code. Refer Allowed languages section.",
+      "type": "string"
+    },
+    "contentType": {
+      "description": "Allowed values or html or text. If html is specified all html tags and special characters will be stripped before processing.",
+      "type": "string"
+    },
+    "url": {
+      "description": "URL where the text for the NER task is stored.",
       "type": "string"
     }
   },
   "required": [
-    "text",
-    "lang"
+    "lang",
+    "contentType",
+    "url"
   ]
 }

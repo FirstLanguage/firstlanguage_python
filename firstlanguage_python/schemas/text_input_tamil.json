@@ -1,6 +1,17 @@
 {
   "id": "TextInputTamil",
   "title": "TextInputTamil",
+  "extensions": {
+    "x-examples": {
+      "example-1": {
+        "input": {
+          "text": "அவள் வேகமாக ஓடினாள்",
+          "lang": "ta"
+        }
+      }
+    },
+    "x-internal": true
+  },
   "type": "object",
   "properties": {
     "input": {

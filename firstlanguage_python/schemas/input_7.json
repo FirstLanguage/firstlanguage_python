@@ -3,17 +3,25 @@
   "title": "Input7",
   "type": "object",
   "properties": {
-    "text": {
-      "description": "Named Entities will be marked from this text. Special characters will not be stripped.",
-      "type": "string"
+    "flattable": {
+      "description": "Table if JSON format",
+      "type": "object"
     },
-    "lang": {
-      "description": "Allowed language code. Refer Allowed languages section.",
-      "type": "string"
+    "sendBackRows": {
+      "description": "Send back original rows from which the answer was extracted. Input either true or false.",
+      "type": "boolean"
+    },
+    "questions": {
+      "description": "Array of questions.",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
     }
   },
   "required": [
-    "text",
-    "lang"
+    "flattable",
+    "sendBackRows",
+    "questions"
   ]
 }

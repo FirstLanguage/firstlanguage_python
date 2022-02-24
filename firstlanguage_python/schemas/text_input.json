@@ -1,6 +1,9 @@
 {
   "id": "TextInput",
   "title": "TextInput",
+  "extensions": {
+    "x-internal": true
+  },
   "type": "object",
   "properties": {
     "input": {

@@ -1,0 +1,25 @@
+{
+  "id": "Api Tableqa Response",
+  "title": "Api Tableqa Response",
+  "type": "object",
+  "properties": {
+    "query": {
+      "description": "Original Question",
+      "type": "string"
+    },
+    "answer": {
+      "description": "",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "rows": {
+      "description": "",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

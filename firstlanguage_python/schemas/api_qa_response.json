@@ -1,6 +1,16 @@
 {
   "id": "Api Qa Response",
   "title": "Api Qa Response",
+  "extensions": {
+    "x-examples": {
+      "example-1": {
+        "score": 0.028566665947437286,
+        "start": 0,
+        "end": 20,
+        "answer": "உப்பு, புளி, மிளகாய்"
+      }
+    }
+  },
   "type": "object",
   "properties": {
     "score": {

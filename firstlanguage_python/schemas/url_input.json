@@ -1,6 +1,18 @@
 {
   "id": "URLInput",
   "title": "URLInput",
+  "extensions": {
+    "x-examples": {
+      "example-1": {
+        "input": {
+          "url": "http://news.bbc.co.uk/2/hi/health/2284783.stm",
+          "lang": "en",
+          "contentType": "html"
+        }
+      }
+    },
+    "x-internal": true
+  },
   "type": "object",
   "properties": {
     "input": {

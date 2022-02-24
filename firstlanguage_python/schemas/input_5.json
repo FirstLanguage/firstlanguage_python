@@ -12,7 +12,7 @@
       "type": "string"
     },
     "context": {
-      "description": "Sentence or a paragraph. Special characters will not be stripped.",
+      "description": "Sentence or a paragraph. Special characters will not be stripped. Maximum size limit is ~5KB of context text.",
       "type": "string"
     }
   },
