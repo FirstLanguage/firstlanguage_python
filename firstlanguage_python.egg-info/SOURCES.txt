@@ -1,6 +1,6 @@
 LICENSE
 MANIFEST.in
-README.html
+README.md
 setup.cfg
 setup.py
 firstlanguage_python/__init__.py
@@ -17,6 +17,7 @@ firstlanguage_python/controllers/__init__.py
 firstlanguage_python/controllers/advanced_api_controller.py
 firstlanguage_python/controllers/base_controller.py
 firstlanguage_python/controllers/basic_api_controller.py
+firstlanguage_python/controllers/enterprise_only_controller.py
 firstlanguage_python/exceptions/__init__.py
 firstlanguage_python/exceptions/api_classify_426_error_exception.py
 firstlanguage_python/exceptions/api_exception.py
@@ -34,7 +35,7 @@ firstlanguage_python/http/http_request.py
 firstlanguage_python/http/http_response.py
 firstlanguage_python/http/requests_client.py
 firstlanguage_python/http/auth/__init__.py
-firstlanguage_python/http/auth/custom_header_auth.py
+firstlanguage_python/http/auth/custom_header_authentication.py
 firstlanguage_python/models/__init__.py
 firstlanguage_python/models/api_ner_request.py
 firstlanguage_python/models/api_ner_request_1.py
@@ -42,9 +43,14 @@ firstlanguage_python/models/api_ner_response.py
 firstlanguage_python/models/api_qa_request.py
 firstlanguage_python/models/api_qa_request_1.py
 firstlanguage_python/models/api_qa_response.py
+firstlanguage_python/models/api_question_request.py
+firstlanguage_python/models/api_question_response.py
 firstlanguage_python/models/api_summary_request.py
 firstlanguage_python/models/api_summary_request_1.py
 firstlanguage_python/models/api_summary_response.py
+firstlanguage_python/models/api_tableqa_request.py
+firstlanguage_python/models/api_tableqa_request_1.py
+firstlanguage_python/models/api_tableqa_response.py
 firstlanguage_python/models/api_translate_request.py
 firstlanguage_python/models/api_translate_request_1.py
 firstlanguage_python/models/api_translate_response.py
@@ -54,6 +60,9 @@ firstlanguage_python/models/input_1.py
 firstlanguage_python/models/input_10.py
 firstlanguage_python/models/input_11.py
 firstlanguage_python/models/input_12.py
+firstlanguage_python/models/input_13.py
+firstlanguage_python/models/input_14.py
+firstlanguage_python/models/input_15.py
 firstlanguage_python/models/input_2.py
 firstlanguage_python/models/input_3.py
 firstlanguage_python/models/input_4.py
@@ -82,3 +91,5 @@ tests/test_helper.py
 tests/controllers/__init__.py
 tests/controllers/controller_test_base.py
 tests/controllers/test_advanced_ap_is_controller.py
+tests/controllers/test_basic_ap_is_controller.py
+tests/controllers/test_enterprise_only_controller.py

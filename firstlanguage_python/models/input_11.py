@@ -19,32 +19,27 @@ class Input11(object):
     TODO: type model description here.
 
     Attributes:
+        text (string): Named Entities will be marked from this text. Special
+            characters will not be stripped.
         lang (string): Allowed language code. Refer Allowed languages
             section.
-        content_type (string): Allowed values or html or text. If html is
-            specified all html tags and special characters will be stripped
-            before processing.
-        url (string): URL where the text for the NER task is stored.
 
     """
 
     # Create a mapping from Model property names to API property names
     _names = {
-        "lang": 'lang',
-        "content_type": 'contentType',
-        "url": 'url'
+        "text": 'text',
+        "lang": 'lang'
     }
 
     def __init__(self,
-                 lang=None,
-                 content_type=None,
-                 url=None):
+                 text=None,
+                 lang=None):
         """Constructor for the Input11 class"""
 
         # Initialize members of the class
+        self.text = text
         self.lang = lang
-        self.content_type = content_type
-        self.url = url
 
     @classmethod
     def from_dictionary(cls,
@@ -64,14 +59,12 @@ class Input11(object):
             return None
 
         # Extract variables from the dictionary
+        text = dictionary.get('text')
         lang = dictionary.get('lang')
-        content_type = dictionary.get('contentType')
-        url = dictionary.get('url')
 
         # Return an object of this model
-        return cls(lang,
-                   content_type,
-                   url)
+        return cls(text,
+                   lang)
 
     @classmethod
     def validate(cls, val):

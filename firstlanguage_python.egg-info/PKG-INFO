@@ -1,12 +1,12 @@
 Metadata-Version: 2.1
 Name: firstlanguage-python
-Version: 1.0.1
+Version: 2
 Summary: Python client library for FirstLanguage API
 Home-page: https://www.firstlanguage.in/contactus
 Author: FirstLanguage
 Author-email: info@firstlanguage.in
 License: UNKNOWN
-Download-URL: https://github.com/FirstLanguage/firstlanguage_python/archive/refs/tags/v_1.tar.gz
+Download-URL: https://github.com/FirstLanguage/firstlanguage_python/archive/refs/tags/v2.0.tar.gz
 Description: 
         # Getting Started with FirstLanguage API
         

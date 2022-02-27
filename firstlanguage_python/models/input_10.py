@@ -19,26 +19,25 @@ class Input10(object):
     TODO: type model description here.
 
     Attributes:
-        text (string): Named Entities will be marked from this text. Special
-            characters will not be stripped.
-        lang (string): Allowed language code. Refer Allowed languages
-            section.
+        question (string): Question to be answered from the context loaded in
+            memory
+        lang (string): Language of the question
 
     """
 
     # Create a mapping from Model property names to API property names
     _names = {
-        "text": 'text',
+        "question": 'question',
         "lang": 'lang'
     }
 
     def __init__(self,
-                 text=None,
+                 question=None,
                  lang=None):
         """Constructor for the Input10 class"""
 
         # Initialize members of the class
-        self.text = text
+        self.question = question
         self.lang = lang
 
     @classmethod
@@ -59,11 +58,11 @@ class Input10(object):
             return None
 
         # Extract variables from the dictionary
-        text = dictionary.get('text')
+        question = dictionary.get('question')
         lang = dictionary.get('lang')
 
         # Return an object of this model
-        return cls(text,
+        return cls(question,
                    lang)
 
     @classmethod

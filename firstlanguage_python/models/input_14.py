@@ -19,26 +19,32 @@ class Input14(object):
     TODO: type model description here.
 
     Attributes:
-        text (string): Text for which translation should be generated
         lang (string): Allowed language code. Refer Allowed languages
             section.
+        content_type (string): Allowed values or html or text. If html is
+            specified all html tags and special characters will be stripped
+            before processing.
+        url (string): Text from this URL will be read and a summary generated
 
     """
 
     # Create a mapping from Model property names to API property names
     _names = {
-        "text": 'text',
-        "lang": 'lang'
+        "lang": 'lang',
+        "content_type": 'contentType',
+        "url": 'url'
     }
 
     def __init__(self,
-                 text=None,
-                 lang=None):
+                 lang=None,
+                 content_type=None,
+                 url=None):
         """Constructor for the Input14 class"""
 
         # Initialize members of the class
-        self.text = text
         self.lang = lang
+        self.content_type = content_type
+        self.url = url
 
     @classmethod
     def from_dictionary(cls,
@@ -58,12 +64,14 @@ class Input14(object):
             return None
 
         # Extract variables from the dictionary
-        text = dictionary.get('text')
         lang = dictionary.get('lang')
+        content_type = dictionary.get('contentType')
+        url = dictionary.get('url')
 
         # Return an object of this model
-        return cls(text,
-                   lang)
+        return cls(lang,
+                   content_type,
+                   url)
 
     @classmethod
     def validate(cls, val):

@@ -11,7 +11,7 @@
 |  --- | --- | --- | --- |
 | `lang` | `string` | Required | Allowed language code. Refer Allowed languages section. |
 | `content_type` | `string` | Required | Allowed values or html or text. If html is specified all html tags and special characters will be stripped before processing. |
-| `url` | `string` | Required | Text from this URL will be read and a translation generated |
+| `url` | `string` | Required | URL where the text for the NER task is stored. |
 
 ## Example (as JSON)
 

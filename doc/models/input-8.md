@@ -9,17 +9,19 @@
 
 | Name | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `lang` | `string` | Required | Allowed language code. Refer Allowed languages section. |
-| `content_type` | `string` | Required | Allowed values or html or text. If html is specified all html tags and special characters will be stripped before processing. |
-| `url` | `string` | Required | URL where the text for the NER task is stored. |
+| `url` | `string` | Required | URL of the CSV file. |
+| `send_back_rows` | `bool` | Required | Send back original rows from which the answer was extracted. Input either true or false. |
+| `questions` | `List of string` | Required | Array of questions |
 
 ## Example (as JSON)
 
 ```json
 {
-  "lang": "lang2",
-  "contentType": "contentType6",
-  "url": "url4"
+  "url": "url4",
+  "sendBackRows": false,
+  "questions": [
+    "questions1"
+  ]
 }
 ```
 

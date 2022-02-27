@@ -9,17 +9,15 @@
 
 | Name | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `lang` | `string` | Required | Allowed language code. Refer Allowed languages section. |
-| `content_type` | `string` | Required | Allowed values or html or text. If html is specified all html tags and special characters will be stripped before processing. |
-| `url` | `string` | Required | Text from this URL will be read and a summary generated |
+| `question` | `string` | Required | Question to be answered from the context loaded in memory |
+| `lang` | `string` | Required | Language of the question |
 
 ## Example (as JSON)
 
 ```json
 {
-  "lang": "lang2",
-  "contentType": "contentType6",
-  "url": "url4"
+  "question": "question8",
+  "lang": "lang2"
 }
 ```
 

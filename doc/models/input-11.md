@@ -9,7 +9,7 @@
 
 | Name | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `text` | `string` | Required | Text for which translation should be generated |
+| `text` | `string` | Required | Named Entities will be marked from this text. Special characters will not be stripped. |
 | `lang` | `string` | Required | Allowed language code. Refer Allowed languages section. |
 
 ## Example (as JSON)

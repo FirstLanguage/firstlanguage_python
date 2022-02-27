@@ -4,7 +4,7 @@
   "type": "object",
   "properties": {
     "input": {
-      "$ref": "Input14"
+      "$ref": "Input15"
     }
   },
   "required": [

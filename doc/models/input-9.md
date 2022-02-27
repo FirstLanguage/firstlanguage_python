@@ -9,15 +9,13 @@
 
 | Name | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `text` | `string` | Required | Text for which summary should be generated |
-| `lang` | `string` | Required | Allowed language code. Refer Allowed languages section. |
+| `url` | `string` | Required | - |
 
 ## Example (as JSON)
 
 ```json
 {
-  "text": "text0",
-  "lang": "lang2"
+  "url": "url4"
 }
 ```
 

@@ -19,26 +19,21 @@ class Input9(object):
     TODO: type model description here.
 
     Attributes:
-        question (string): Question to be answered from the context loaded in
-            memory
-        lang (string): Language of the question
+        url (string): TODO: type description here.
 
     """
 
     # Create a mapping from Model property names to API property names
     _names = {
-        "question": 'question',
-        "lang": 'lang'
+        "url": 'url'
     }
 
     def __init__(self,
-                 question=None,
-                 lang=None):
+                 url=None):
         """Constructor for the Input9 class"""
 
         # Initialize members of the class
-        self.question = question
-        self.lang = lang
+        self.url = url
 
     @classmethod
     def from_dictionary(cls,
@@ -58,12 +53,10 @@ class Input9(object):
             return None
 
         # Extract variables from the dictionary
-        question = dictionary.get('question')
-        lang = dictionary.get('lang')
+        url = dictionary.get('url')
 
         # Return an object of this model
-        return cls(question,
-                   lang)
+        return cls(url)
 
     @classmethod
     def validate(cls, val):

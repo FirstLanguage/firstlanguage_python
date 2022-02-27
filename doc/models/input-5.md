@@ -11,7 +11,7 @@
 |  --- | --- | --- | --- |
 | `question` | `string` | Required | Question to be answered from the context given. Only One question can be asked at a time. Special characters will not be stripped. |
 | `lang` | `string` | Required | Allowed language code. Refer Allowed languages section. |
-| `context` | `string` | Required | Sentence or a paragraph. Special characters will not be stripped. |
+| `context` | `string` | Required | Sentence or a paragraph. Special characters will not be stripped. Maximum size limit is ~5KB of context text. |
 
 ## Example (as JSON)
 

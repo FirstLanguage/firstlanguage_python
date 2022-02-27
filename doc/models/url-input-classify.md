@@ -9,7 +9,7 @@
 
 | Name | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `input` | [`Input3`](/firstlanguage_python/doc/models/input-3.html) | Required | - |
+| `input` | [`Input3`](/doc/models/input-3.md) | Required | - |
 
 ## Example (as JSON)
 

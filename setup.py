@@ -4,22 +4,22 @@ import sys
 from setuptools import setup, find_packages
 
 if sys.version_info[0] < 3:
-    with open('README.html', 'r') as fh:
+    with open('README.md', 'r') as fh:
         long_description = fh.read()
 else:
-    with open('README.html', 'r', encoding='utf-8') as fh:
+    with open('README.md', 'r', encoding='utf-8') as fh:
         long_description = fh.read()
 
 setup(
     name='firstlanguage_python',
-    version='1.0.2',
+    version='2.1',
     description='Python client library for FirstLanguage API',
     long_description=long_description,
     long_description_content_type="text/markdown",
     author='FirstLanguage',
     author_email='info@firstlanguage.in',
     url='https://www.firstlanguage.in/contactus',
-    download_url = 'https://github.com/FirstLanguage/firstlanguage_python/archive/refs/tags/v_1.tar.gz',
+    download_url = 'https://github.com/FirstLanguage/firstlanguage_python/archive/refs/tags/v2.0.tar.gz',
     keywords = ['FirstLanguage API', 'NLP', 'SDK', 'Python', 'Natural Language Processing'],  
     packages=find_packages(),
     install_requires=[

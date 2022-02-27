@@ -9,7 +9,7 @@
 
 | Name | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `errors` | [`List of Errors1`](/firstlanguage_python/doc/models/errors-1.html) | Optional | - |
+| `errors` | [`List of Errors1`](/doc/models/errors-1.md) | Optional | - |
 
 ## Example (as JSON)
 

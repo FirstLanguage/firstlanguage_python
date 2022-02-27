@@ -27,3 +27,12 @@ body = jsonpickle.decode(reqbody)
 result = advanced_api_controller.get_translate(body)
 
 print(result)
+
+reqbody='{"input":{"url":"https://i.redd.it/v1fvin01ynv51.jpg"} }'
+
+body = jsonpickle.decode(reqbody)
+
+result = advanced_api_controller.get_image_caption(body)
+
+print("generated caption: "+result.generated_caption)
+

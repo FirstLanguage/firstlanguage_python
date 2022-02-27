@@ -1,0 +1,20 @@
+{
+  "id": "Api Imagecaption Response",
+  "title": "Api Imagecaption Response",
+  "extensions": {
+    "x-examples": {
+      "example-1": {
+        "generated_caption": "A view of a beach with a sun shining over it"
+      }
+    }
+  },
+  "type": "object",
+  "properties": {
+    "generated_caption": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "generated_caption"
+  ]
+}

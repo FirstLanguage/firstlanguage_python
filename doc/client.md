@@ -35,4 +35,5 @@ The gateway for the SDK. This class acts as a factory for the Controllers and al
 |  --- | --- |
 | basic_api | Gets BasicAPIsController |
 | advanced_api | Gets AdvancedAPIsController |
+| enterprise_only | Gets EnterpriseOnlyController |
 

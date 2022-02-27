@@ -13,6 +13,7 @@ from firstlanguage_python.controllers.base_controller import BaseController
 from firstlanguage_python.models.responseclassify import Responseclassify
 from firstlanguage_python.models.api_qa_response import ApiQaResponse
 from firstlanguage_python.models.api_tableqa_response import ApiTableqaResponse
+from firstlanguage_python.models.api_imagecaption_response import ApiImagecaptionResponse
 from firstlanguage_python.models.api_ner_response import ApiNerResponse
 from firstlanguage_python.models.api_summary_response import ApiSummaryResponse
 from firstlanguage_python.models.api_translate_response import ApiTranslateResponse
@@ -248,6 +249,75 @@ AVERAGE
         self.validate_response(_response)
 
         decoded = APIHelper.json_deserialize(_response.text, ApiTableqaResponse.from_dictionary)
+
+        return decoded
+
+    def get_image_caption(self,
+                          body=None):
+        """Does a POST request to /api/imagecaption.
+
+        # Image Captioning with Visual Attention : Defintion and it's usage
+        Image Captioning is the process of generating textual description of
+        an image. It uses both Natural Language Processing and Computer Vision
+        to generate the captions.
+        This API works generates only English Captions
+        <b>Enterprise Plan Alert:</b> For Enterprise Users GPU powered
+        endpoint can be provisioned. <b> This will reduce the response time of
+        the API by alomst 90%.</b> 
+
+        Args:
+            body (ApiImagecaptionRequest, optional): Add a JSON Input as per
+                the schema defined below.   For URL, if you are providing
+                Google drive or Google Spreadsheet url ensure that you provide
+                a link which can download the file directly and not the share
+                link.  Example: For Google Spreadsheet, the url format will be
+                like below:
+                https://docs.google.com/spreadsheets/d/1TtzPAHqpaTB7Ltdq0zwZ8Fa
+                mF7OwI/export?format=csv&gid=151344200  Or for Google Drive,
+                it will be like below:
+                https://drive.google.com/uc?id=idofthefile
+
+        Returns:
+            ApiImagecaptionResponse: Response from the API. Generates caption
+                for the provided image.
+
+        Raises:
+            APIException: When an error occurs while fetching the data from
+                the remote API. This exception includes the HTTP Response
+                code, an error message, and the HTTP body that was received in
+                the request.
+
+        """
+
+        # Prepare query URL
+        _url_path = '/api/imagecaption'
+        _query_builder = self.config.get_base_uri()
+        _query_builder += _url_path
+        _query_url = APIHelper.clean_url(_query_builder)
+
+        # Prepare headers
+        _headers = {
+            'accept': 'application/json',
+            'Content-Type': 'application/json'
+        }
+
+        # Prepare and execute request
+        _request = self.config.http_client.post(_query_url, headers=_headers, parameters=APIHelper.json_serialize(body))
+        # Apply authentication scheme on request
+        self.apply_auth_schemes(_request, 'global')
+
+        _response = self.execute_request(_request)
+
+        # Endpoint and global error handling using HTTP status codes.
+        if _response.status_code == 400:
+            raise ErrorsException('Bad Request', _response)
+        elif _response.status_code == 426:
+            raise M426ErrorException('Please use HTTPS protocol', _response)
+        elif _response.status_code == 429:
+            raise APIException('Too Many Requests', _response)
+        self.validate_response(_response)
+
+        decoded = APIHelper.json_deserialize(_response.text, ApiImagecaptionResponse.from_dictionary)
 
         return decoded
 

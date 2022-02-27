@@ -9,7 +9,7 @@
 
 | Name | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `orignal_string` | [`OrignalString`](/firstlanguage_python/doc/models/orignal-string.html) | Optional | - |
+| `orignal_string` | [`OrignalString`](/doc/models/orignal-string.md) | Optional | - |
 
 ## Example (as JSON)
 

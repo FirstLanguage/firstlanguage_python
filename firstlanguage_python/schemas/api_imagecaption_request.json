@@ -1,0 +1,22 @@
+{
+  "id": "Api Imagecaption Request",
+  "title": "Api Imagecaption Request",
+  "extensions": {
+    "x-examples": {
+      "example-1": {
+        "input": {
+          "url": "https://i.redd.it/v1fvin01ynv51.jpg"
+        }
+      }
+    }
+  },
+  "type": "object",
+  "properties": {
+    "input": {
+      "$ref": "Input9"
+    }
+  },
+  "required": [
+    "input"
+  ]
+}
