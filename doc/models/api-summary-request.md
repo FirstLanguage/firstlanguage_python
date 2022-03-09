@@ -9,7 +9,7 @@
 
 | Name | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `input` | [`Input13`](/doc/models/input-13.md) | Required | - |
+| `input` | [`Input13`](../../doc/models/input-13.md) | Required | - |
 
 ## Example (as JSON)
 

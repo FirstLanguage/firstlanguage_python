@@ -12,7 +12,7 @@
       "type": "string"
     },
     "contentType": {
-      "description": "Allowed values or html or text. If html is specified all html tags and special characters will be stripped before processing.",
+      "description": "Allowed values are:html,plaintext, pdf, docx\nIf html is specified all html tags and special characters will be stripped before processing.\nFor PDF and docx, all text will be read. Scanned documents will not work.",
       "type": "string"
     },
     "url": {

@@ -32,7 +32,6 @@ class BasicAPIsController(BaseController):
                     body):
         """Does a POST request to /api/stemmer.
 
-        # Stemmer : Defintion and it's usage
         A word takes different inflectional forms. For instance, the word,
         "Compute" can take the forms, "computing", "computation",  and
         "computerize". The NLP applications such as Search Engines and
@@ -74,7 +73,14 @@ class BasicAPIsController(BaseController):
         |  Turkish     |  tr        |
 
         Args:
-            body (object): Add a JSON Input as per the schema defined below
+            body (object): Add a JSON Input as per the schema defined below 
+                **Size limit:**   1MB for both text and URL input  **URL
+                Input:**  For URL, we now accept 4 contentTypes. * html *
+                plaintext * pdf * docx  If you are providing Google drive or
+                Google Spreadsheet url, ensure that you provide a link which
+                can download the file directly and not the share link. 
+                Example for Google Drive link:  
+                https://drive.google.com/uc?id=idofthefile
 
         Returns:
             list of Responsestem: Response from the API. Stemmed output.
@@ -123,7 +129,6 @@ class BasicAPIsController(BaseController):
                   body):
         """Does a POST request to /api/lemmatize.
 
-        # Lemmatizer : Defintion and it's usage
         Lemmatizer is similar to stemmer that gives the stemmed version of a
         word but lemmatizer differs from the stemmer in giving a meaningful
         stem or the lemma. For instance, for the word, "smiling", the stemmer
@@ -152,7 +157,14 @@ class BasicAPIsController(BaseController):
         | Spanish            | es       |
 
         Args:
-            body (object): Add a JSON Input as per the schema defined below
+            body (object): Add a JSON Input as per the schema defined below 
+                **Size limit:**   1MB for both text and URL input  **URL
+                Input:**  For URL, we now accept 4 contentTypes. * html *
+                plaintext * pdf * docx  If you are providing Google drive or
+                Google Spreadsheet url, ensure that you provide a link which
+                can download the file directly and not the share link. 
+                Example for Google Drive link:  
+                https://drive.google.com/uc?id=idofthefile
 
         Returns:
             list of Responselemma: Response from the API. Lemmatized output.
@@ -201,7 +213,6 @@ class BasicAPIsController(BaseController):
                   body):
         """Does a POST request to /api/morph.
 
-        # Morphological Analyzer : Defintion and it's usage
         Morphological Analyzer analyzes how a word is formed. It breaks a word
         into smaller units called, "morphemes" and gives a clue on the pattern
         of words of a particular langauge.  It can be used for building
@@ -228,7 +239,14 @@ class BasicAPIsController(BaseController):
         | Spanish            | es       |
 
         Args:
-            body (object): Add a JSON Input as per the schema defined below
+            body (object): Add a JSON Input as per the schema defined below 
+                **Size limit:**   1MB for both text and URL input  **URL
+                Input:**  For URL, we now accept 4 contentTypes. * html *
+                plaintext * pdf * docx  If you are providing Google drive or
+                Google Spreadsheet url, ensure that you provide a link which
+                can download the file directly and not the share link. 
+                Example for Google Drive link:  
+                https://drive.google.com/uc?id=idofthefile
 
         Returns:
             Responsemorph: Response from the API. Morphological output.
@@ -277,20 +295,19 @@ class BasicAPIsController(BaseController):
                    body):
         """Does a POST request to /api/postag.
 
-         # Parts of Speech Tagger : Defintion and it's usage
-          Parts of Speech Tagger, which is shortly known as POS Tagger is a
-          software that automatically finds the word classes, when a text
-          input is given. The text input can be a word, a sentence or a set of
-          sentences. The word classes are the grammatical categories such as,
-          Noun, Verb, Adverb etc. The category assigned to each word is called
-          as a tag. A set of tags, each indicating a grammatical category is
-          called, "tagsets". POS tagging is a mandatory pre-processing for
-          most of the Natural Language Processing Applications such as,
-          Information Extraction, Information Retreival systems and Summary
-          generation systems. A POS Tagger is a language-dependent software as
-          the grammar rules will differ for every language. For instance, a
-          word ending with "ing" might indicate a "Verb" in English but this
-          will not be applicable for other languages. 
+        Parts of Speech Tagger, which is shortly known as POS Tagger is a
+        software that automatically finds the word classes, when a text input
+        is given. The text input can be a word, a sentence or a set of
+        sentences. The word classes are the grammatical categories such as,
+        Noun, Verb, Adverb etc. The category assigned to each word is called
+        as a tag. A set of tags, each indicating a grammatical category is
+        called, "tagsets". POS tagging is a mandatory pre-processing for most
+        of the Natural Language Processing Applications such as, Information
+        Extraction, Information Retreival systems and Summary generation
+        systems. A POS Tagger is a language-dependent software as the grammar
+        rules will differ for every language. For instance, a word ending with
+        "ing" might indicate a "Verb" in English but this will not be
+        applicable for other languages. 
         # Languages covered:
         | Languages          | ISO Code |
         |--------------------|----------|
@@ -306,7 +323,14 @@ class BasicAPIsController(BaseController):
          
 
         Args:
-            body (object): Add a JSON Input as per the schema defined below
+            body (object): Add a JSON Input as per the schema defined below 
+                **Size limit:**   1MB for both text and URL input  **URL
+                Input:**  For URL, we now accept 4 contentTypes. * html *
+                plaintext * pdf * docx  If you are providing Google drive or
+                Google Spreadsheet url, ensure that you provide a link which
+                can download the file directly and not the share link. 
+                Example for Google Drive link:  
+                https://drive.google.com/uc?id=idofthefile
 
         Returns:
             list of Responsepo: Response from the API. POSTAG output.

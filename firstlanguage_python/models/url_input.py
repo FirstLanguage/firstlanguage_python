@@ -21,7 +21,6 @@ class URLInput(object):
 
     Attributes:
         input (Input1): Text for processing will be read from the given URL.
-            Only HTML pages or text pages will be processed at this time.
 
     """
 

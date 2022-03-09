@@ -9,7 +9,7 @@
 
 | Name | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `input` | [`Input16`](/doc/models/input-16.md) | Required | - |
+| `input` | [`Input16`](../../doc/models/input-16.md) | Required | - |
 
 ## Example (as JSON)
 
@@ -18,7 +18,8 @@
   "input": {
     "lang": "lang0",
     "contentType": "contentType4",
-    "url": "url2"
+    "url": "url2",
+    "preserveFormat": "preserveFormat8"
   }
 }
 ```

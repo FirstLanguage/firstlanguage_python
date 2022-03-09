@@ -9,7 +9,7 @@
 
 | Name | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `input` | [`Input`](/doc/models/input.md) | Required | Direct Text Input |
+| `input` | [`Input`](../../doc/models/input.md) | Required | Direct Text Input |
 
 ## Example (as JSON)
 

@@ -22,9 +22,10 @@ class Input3(object):
         url (string): URL where the content is hosted.
         lang (string): Allowed language code. Refer Allowed languages
             section.
-        content_type (string): Allowed values or html or text. If html is
-            specified all html tags and special characters will be stripped
-            before processing.
+        content_type (string): Allowed values are:html,plaintext, pdf, docx If
+            html is specified all html tags and special characters will be
+            stripped before processing. For PDF and docx, all text will be
+            read. Scanned documents will not work.
         labels (list of object): Labels to classify
 
     """

@@ -100,6 +100,7 @@ The following parameters are configurable for the API Client:
 | `backoff_factor` | `float` | A backoff factor to apply between attempts after the second try. <br> **Default: 2** |
 | `retry_statuses` | `Array of int` | The http statuses on which retry is to be done. <br> **Default: [408, 413, 429, 500, 502, 503, 504, 521, 522, 524]** |
 | `retry_methods` | `Array of string` | The http methods on which retry is to be done. <br> **Default: ['GET', 'PUT']** |
+| `apikey` | `string` |  |
 
 The API client can be initialized as follows:
 
@@ -108,6 +109,7 @@ from firstlanguage_python.firstlanguage_python_client import FirstlanguageapiCli
 from firstlanguage_python.configuration import Environment
 
 client = FirstlanguageapiClient(
+    apikey='apikey',
     environment=Environment.PRODUCTION,)
 ```
 

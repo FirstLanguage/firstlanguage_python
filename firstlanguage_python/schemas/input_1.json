@@ -1,7 +1,7 @@
 {
   "id": "Input1",
   "title": "Input1",
-  "description": "Text for processing will be read from the given URL. Only HTML pages or text pages will be processed at this time.",
+  "description": "Text for processing will be read from the given URL.",
   "type": "object",
   "properties": {
     "url": {
@@ -15,7 +15,7 @@
       "type": "string"
     },
     "contentType": {
-      "description": "Allowed values or html or text. If html is specified all html tags and special characters will be stripped before processing.",
+      "description": "Allowed values are:html,plaintext, pdf, docx\nIf html is specified all html tags and special characters will be stripped before processing.\nFor PDF and docx, all text will be read. Scanned documents will not work.",
       "example": "html",
       "type": "string"
     }

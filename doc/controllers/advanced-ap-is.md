@@ -10,18 +10,16 @@ advanced_ap_is_controller = client.advanced_ap_is
 
 ## Methods
 
-* [Get Classification](/doc/controllers/advanced-ap-is.md#get-classification)
-* [Get QA](/doc/controllers/advanced-ap-is.md#get-qa)
-* [Get Table QA](/doc/controllers/advanced-ap-is.md#get-table-qa)
-* [Get Image Caption](/doc/controllers/advanced-ap-is.md#get-image-caption)
-* [Get NER](/doc/controllers/advanced-ap-is.md#get-ner)
-* [Get Summary](/doc/controllers/advanced-ap-is.md#get-summary)
-* [Get Translate](/doc/controllers/advanced-ap-is.md#get-translate)
+* [Get Classification](../../doc/controllers/advanced-ap-is.md#get-classification)
+* [Get QA](../../doc/controllers/advanced-ap-is.md#get-qa)
+* [Get Table QA](../../doc/controllers/advanced-ap-is.md#get-table-qa)
+* [Get Image Caption](../../doc/controllers/advanced-ap-is.md#get-image-caption)
+* [Get NER](../../doc/controllers/advanced-ap-is.md#get-ner)
+* [Get Summary](../../doc/controllers/advanced-ap-is.md#get-summary)
+* [Get Translate](../../doc/controllers/advanced-ap-is.md#get-translate)
 
 
 # Get Classification
-
-# Text Classification  : Defintion and it's usage
 
 A text classifier identifies the categories of the text given as input. Classifying the texts is one of the powerful preprocessing technique in topic identification and sentiment classification (product reviews, movie reviews etc)and indexing the texts while building a search system.
 
@@ -54,11 +52,11 @@ def get_classification(self,
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `body` | [`object`]($m/) | Body, Required | Add a JSON Input as per the schema defined below |
+| `body` | [`object`](../../$m/) | Body, Required | Add a JSON Input as per the schema defined below<br><br>**Size limit:**<br><br>1MB for both text and URL input<br><br>**URL Input:**<br><br>For URL, we now accept 4 contentTypes.<br><br>* html<br>* plaintext<br>* pdf<br>* docx<br><br>If you are providing Google drive or Google Spreadsheet url, ensure that you provide a link which can download the file directly and not the share link.<br><br>Example for Google Drive link:<br><br>https://drive.google.com/uc?id=idofthefile |
 
 ## Response Type
 
-[`Responseclassify`](/doc/models/responseclassify.md)
+[`Responseclassify`](../../doc/models/responseclassify.md)
 
 ## Example Usage
 
@@ -87,14 +85,12 @@ result = advanced_ap_is_controller.get_classification(body)
 
 | HTTP Status Code | Error Description | Exception Class |
 |  --- | --- | --- |
-| 400 | Error output | [`ErrorsException`](/doc/models/errors-exception.md) |
-| 426 | Please use HTTPS protocol | [`ApiClassify426ErrorException`](/doc/models/api-classify-426-error-exception.md) |
+| 400 | Error output | [`ErrorsException`](../../doc/models/errors-exception.md) |
+| 426 | Please use HTTPS protocol | [`ApiClassify426ErrorException`](../../doc/models/api-classify-426-error-exception.md) |
 | 429 | Too Many Requests | `APIException` |
 
 
 # Get QA
-
-# QA : Defintion and it's usage
 
 A Question Answering System retrieves the answer relevant to the question given by the user. A question answering system can be used for building a text based chatbots, search engines etc. Our question answering system  is mutilingual and supports 100 + languages. Please use ISO 639-2 2 digit language code  to get results. For example, use 'en' for English, 'ta' for Tamil, 'hi' for Hindi, 'fr' for French etc.
 
@@ -109,11 +105,11 @@ def get_qa(self,
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `body` | [`object`]($m/) | Body, Optional | Add a JSON Input as per the schema defined below |
+| `body` | [`object`](../../$m/) | Body, Optional | Add a JSON Input as per the schema defined below<br><br>**Size limit:**<br><br>1MB for both text and URL input<br><br>**URL Input:**<br><br>For URL, we now accept 4 contentTypes.<br><br>* html<br>* plaintext<br>* pdf<br>* docx<br><br>If you are providing Google drive or Google Spreadsheet url, ensure that you provide a link which can download the file directly and not the share link.<br><br>Example for Google Drive link:<br><br>https://drive.google.com/uc?id=idofthefile |
 
 ## Response Type
 
-[`ApiQaResponse`](/doc/models/api-qa-response.md)
+[`ApiQaResponse`](../../doc/models/api-qa-response.md)
 
 ## Example Usage
 
@@ -138,8 +134,8 @@ result = advanced_ap_is_controller.get_qa(body)
 
 | HTTP Status Code | Error Description | Exception Class |
 |  --- | --- | --- |
-| 400 | Bad Request | [`ErrorsException`](/doc/models/errors-exception.md) |
-| 426 | Please use HTTPS protocol | [`M426ErrorException`](/doc/models/m426-error-exception.md) |
+| 400 | Bad Request | [`ErrorsException`](../../doc/models/errors-exception.md) |
+| 426 | Please use HTTPS protocol | [`M426ErrorException`](../../doc/models/m426-error-exception.md) |
 | 429 | Too Many Requests | `APIException` |
 
 
@@ -165,11 +161,11 @@ def get_table_qa(self,
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `body` | [`object`]($m/) | Body, Optional | Add a JSON Input as per the schema defined below. For URL input, if you are providing Google drive or Google Spreadsheet url ensure that you provide a link which can download the file directly and not the share link.<br><br>Example: For Google Spreadsheet, the url format will be like below:<br>https://docs.google.com/spreadsheets/d/1TtzPAHqpaTB7Ltdq0zwZ8FamF7O9aC4KH4EpmwI/export?format=csv&gid=151344200<br><br>Or for Google Drive, it will be like below:<br>https://drive.google.com/uc?id=idofthefile<br><br>For Flat table input check the example out. |
+| `body` | [`object`](../../$m/) | Body, Optional | Add a JSON Input as per the schema defined below. For URL input, if you are providing Google drive or Google Spreadsheet url ensure that you provide a link which can download the file directly and not the share link.<br><br>Example for Google Spreadsheet link:<br><br>https://docs.google.com/spreadsheets/d/1TtzPAHqpaTB7Ltdq0zwZ8FamF7O9aC4KH4EpmwI/export?format=csv&gid=151344200<br><br>Example for Google Drive link:<br><br>https://drive.google.com/uc?id=idofthefile<br><br>For Flat table input check the example. |
 
 ## Response Type
 
-[`List of ApiTableqaResponse`](/doc/models/api-tableqa-response.md)
+[`List of ApiTableqaResponse`](../../doc/models/api-tableqa-response.md)
 
 ## Example Usage
 
@@ -209,8 +205,8 @@ result = advanced_ap_is_controller.get_table_qa(body)
 
 | HTTP Status Code | Error Description | Exception Class |
 |  --- | --- | --- |
-| 400 | Bad Request | [`ErrorsException`](/doc/models/errors-exception.md) |
-| 426 | Please use HTTPS protocol | [`M426ErrorException`](/doc/models/m426-error-exception.md) |
+| 400 | Bad Request | [`ErrorsException`](../../doc/models/errors-exception.md) |
+| 426 | Please use HTTPS protocol | [`M426ErrorException`](../../doc/models/m426-error-exception.md) |
 | 429 | Too Many Requests | `APIException` |
 
 
@@ -233,11 +229,11 @@ def get_image_caption(self,
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `body` | [`ApiImagecaptionRequest`](/doc/models/api-imagecaption-request.md) | Body, Optional | Add a JSON Input as per the schema defined below.<br><br>For URL, if you are providing Google drive or Google Spreadsheet url ensure that you provide a link which can download the file directly and not the share link.<br><br>Example: For Google Spreadsheet, the url format will be like below:<br>https://docs.google.com/spreadsheets/d/1TtzPAHqpaTB7Ltdq0zwZ8FamF7OwI/export?format=csv&gid=151344200<br><br>Or for Google Drive, it will be like below:<br>https://drive.google.com/uc?id=idofthefile |
+| `body` | [`ApiImagecaptionRequest`](../../doc/models/api-imagecaption-request.md) | Body, Optional | Add a JSON Input as per the schema defined below.<br><br>For URL, if you are providing Google drive or Google Spreadsheet url ensure that you provide a link which can download the file directly and not the share link.<br><br>Example for Google Drive:<br><br>https://drive.google.com/uc?id=idofthefile |
 
 ## Response Type
 
-[`ApiImagecaptionResponse`](/doc/models/api-imagecaption-response.md)
+[`ApiImagecaptionResponse`](../../doc/models/api-imagecaption-response.md)
 
 ## Example Usage
 
@@ -261,14 +257,12 @@ result = advanced_ap_is_controller.get_image_caption(body)
 
 | HTTP Status Code | Error Description | Exception Class |
 |  --- | --- | --- |
-| 400 | Bad Request | [`ErrorsException`](/doc/models/errors-exception.md) |
-| 426 | Please use HTTPS protocol | [`M426ErrorException`](/doc/models/m426-error-exception.md) |
+| 400 | Bad Request | [`ErrorsException`](../../doc/models/errors-exception.md) |
+| 426 | Please use HTTPS protocol | [`M426ErrorException`](../../doc/models/m426-error-exception.md) |
 | 429 | Too Many Requests | `APIException` |
 
 
 # Get NER
-
-# Named Entity Recognition : Defintion and it's usage
 
 Named Entity Recognitiion  (NER) is extracting the specific Nouns such as, Person Names, Location names, Organization Names, Currency , Dates. It is a classification task. NER can be used as a sub-task in applications such as Search Systems, Chatbots, Question Answering systems, Text Summarization etc.
 
@@ -299,11 +293,11 @@ def get_ner(self,
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `body` | [`object`]($m/) | Body, Optional | Add a JSON Input as per the schema defined below |
+| `body` | [`object`](../../$m/) | Body, Optional | Add a JSON Input as per the schema defined below<br><br>**Size limit:**<br><br>1MB for both text and URL input<br><br>**URL Input:**<br><br>For URL, we now accept 4 contentTypes.<br><br>* html<br>* plaintext<br>* pdf<br>* docx<br><br>If you are providing Google drive or Google Spreadsheet url, ensure that you provide a link which can download the file directly and not the share link.<br><br>Example for Google Drive link:<br><br>https://drive.google.com/uc?id=idofthefile |
 
 ## Response Type
 
-[`List of ApiNerResponse`](/doc/models/api-ner-response.md)
+[`List of ApiNerResponse`](../../doc/models/api-ner-response.md)
 
 ## Example Usage
 
@@ -336,14 +330,12 @@ result = advanced_ap_is_controller.get_ner(body)
 
 | HTTP Status Code | Error Description | Exception Class |
 |  --- | --- | --- |
-| 400 | Bad Request | [`ErrorsException`](/doc/models/errors-exception.md) |
-| 426 | Please use HTTPS protocol | [`M426ErrorException`](/doc/models/m426-error-exception.md) |
+| 400 | Bad Request | [`ErrorsException`](../../doc/models/errors-exception.md) |
+| 426 | Please use HTTPS protocol | [`M426ErrorException`](../../doc/models/m426-error-exception.md) |
 | 429 | Too Many Requests | `APIException` |
 
 
 # Get Summary
-
-# Summarization : Defintion and it's usage
 
 Summarization generates a crisp content of the large input text which is highly coherent.
 
@@ -401,11 +393,11 @@ def get_summary(self,
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `body` | [`object`]($m/) | Body, Optional | Add a JSON Input as per the schema defined below |
+| `body` | [`object`](../../$m/) | Body, Optional | Add a JSON Input as per the schema defined below<br><br>**Size limit:**<br><br>1MB for both text and URL input<br><br>**URL Input:**<br><br>For URL, we now accept 4 contentTypes.<br><br>* html<br>* plaintext<br>* pdf<br>* docx<br><br>If you are providing Google drive or Google Spreadsheet url, ensure that you provide a link which can download the file directly and not the share link.<br><br>Example for Google Drive link:<br><br>https://drive.google.com/uc?id=idofthefile |
 
 ## Response Type
 
-[`ApiSummaryResponse`](/doc/models/api-summary-response.md)
+[`ApiSummaryResponse`](../../doc/models/api-summary-response.md)
 
 ## Example Usage
 
@@ -427,14 +419,12 @@ result = advanced_ap_is_controller.get_summary(body)
 
 | HTTP Status Code | Error Description | Exception Class |
 |  --- | --- | --- |
-| 400 | Bad Request | [`ErrorsException`](/doc/models/errors-exception.md) |
-| 426 | Please use HTTPS protocol | [`M426ErrorException`](/doc/models/m426-error-exception.md) |
+| 400 | Bad Request | [`ErrorsException`](../../doc/models/errors-exception.md) |
+| 426 | Please use HTTPS protocol | [`M426ErrorException`](../../doc/models/m426-error-exception.md) |
 | 429 | Too Many Requests | `APIException` |
 
 
 # Get Translate
-
-# Translation : Defintion and it's usage
 
 Machine Translation is translating the text automatically from  one language to another langauge.
 
@@ -508,11 +498,11 @@ def get_translate(self,
 
 | Parameter | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `body` | [`object`]($m/) | Body, Optional | Add a JSON Input as per the schema defined below |
+| `body` | [`object`](../../$m/) | Body, Optional | Add a JSON Input as per the schema defined below<br><br>**Size limit:**<br><br>1MB for both text and URL input<br><br>**URL Input:**<br><br>For URL, we now accept 4 contentTypes.<br><br>* html<br>* plaintext<br>* pdf<br>* docx<br><br>If you are providing Google drive or Google Spreadsheet url, ensure that you provide a link which can download the file directly and not the share link.<br><br>Example for Google Drive link:<br><br>https://drive.google.com/uc?id=idofthefile<br><br>**preserveFormat Flag:**<br><br>When true:<br><br>This applies only for PDF and DOCX content types. The API will try to maintain the source file formatting. DOCX files will mostly work without any issues. But for PDF files, the API will try to maintain the format but it is not guaranteed. Scanned documents will also not work. For PDF files, if the target language font is not renderred properly, please report the issue at info@firstlanguage.in<br><br>When false:<br><br>If the flag is false, then the API will simply read all text in the PDF and docx files and translate and send the response back as plaintext. |
 
 ## Response Type
 
-[`ApiTranslateResponse`](/doc/models/api-translate-response.md)
+[`ApiTranslateResponse`](../../doc/models/api-translate-response.md)
 
 ## Example Usage
 
@@ -534,7 +524,7 @@ result = advanced_ap_is_controller.get_translate(body)
 
 | HTTP Status Code | Error Description | Exception Class |
 |  --- | --- | --- |
-| 400 | Bad Request | [`ErrorsException`](/doc/models/errors-exception.md) |
-| 426 | Please use HTTPS protocol | [`M426ErrorException`](/doc/models/m426-error-exception.md) |
+| 400 | Bad Request | [`ErrorsException`](../../doc/models/errors-exception.md) |
+| 426 | Please use HTTPS protocol | [`M426ErrorException`](../../doc/models/m426-error-exception.md) |
 | 429 | Too Many Requests | `APIException` |
 

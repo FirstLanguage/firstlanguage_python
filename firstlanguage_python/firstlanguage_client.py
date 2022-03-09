@@ -38,7 +38,7 @@ class Client(object):
                  max_retries=0, backoff_factor=2,
                  retry_statuses=[408, 413, 429, 500, 502, 503, 504, 521, 522, 524],
                  retry_methods=['GET', 'PUT'],
-                 environment=Environment.PRODUCTION, apikey='BHbLvTKeT4y9PACVomcGBF3GrCv1OUOc',
+                 environment=Environment.PRODUCTION, apikey='TODO: Replace',
                  config=None):
         if config is None:
             self.config = Configuration(

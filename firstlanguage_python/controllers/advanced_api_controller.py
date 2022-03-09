@@ -33,7 +33,6 @@ class AdvancedAPIsController(BaseController):
                            body):
         """Does a POST request to /api/classify.
 
-        # Text Classification  : Defintion and it's usage
         A text classifier identifies the categories of the text given as
         input. Classifying the texts is one of the powerful preprocessing
         technique in topic identification and sentiment classification
@@ -59,7 +58,14 @@ class AdvancedAPIsController(BaseController):
         | Vietnamese | vi       |
 
         Args:
-            body (object): Add a JSON Input as per the schema defined below
+            body (object): Add a JSON Input as per the schema defined below 
+                **Size limit:**   1MB for both text and URL input  **URL
+                Input:**  For URL, we now accept 4 contentTypes. * html *
+                plaintext * pdf * docx  If you are providing Google drive or
+                Google Spreadsheet url, ensure that you provide a link which
+                can download the file directly and not the share link. 
+                Example for Google Drive link:  
+                https://drive.google.com/uc?id=idofthefile
 
         Returns:
             Responseclassify: Response from the API. Classifies labels.
@@ -108,7 +114,6 @@ class AdvancedAPIsController(BaseController):
                body=None):
         """Does a POST request to /api/qa.
 
-        # QA : Defintion and it's usage
         A Question Answering System retrieves the answer relevant to the
         question given by the user. A question answering system can be used
         for building a text based chatbots, search engines etc. Our question
@@ -121,7 +126,13 @@ class AdvancedAPIsController(BaseController):
 
         Args:
             body (object, optional): Add a JSON Input as per the schema
-                defined below
+                defined below  **Size limit:**   1MB for both text and URL
+                input  **URL Input:**  For URL, we now accept 4 contentTypes.
+                * html * plaintext * pdf * docx  If you are providing Google
+                drive or Google Spreadsheet url, ensure that you provide a
+                link which can download the file directly and not the share
+                link.  Example for Google Drive link:  
+                https://drive.google.com/uc?id=idofthefile
 
         Returns:
             ApiQaResponse: Response from the API. Answer for the question
@@ -187,13 +198,11 @@ class AdvancedAPIsController(BaseController):
                 defined below. For URL input, if you are providing Google
                 drive or Google Spreadsheet url ensure that you provide a link
                 which can download the file directly and not the share link. 
-                Example: For Google Spreadsheet, the url format will be like
-                below:
+                Example for Google Spreadsheet link: 
                 https://docs.google.com/spreadsheets/d/1TtzPAHqpaTB7Ltdq0zwZ8Fa
-                mF7O9aC4KH4EpmwI/export?format=csv&gid=151344200  Or for
-                Google Drive, it will be like below:
-                https://drive.google.com/uc?id=idofthefile  For Flat table
-                input check the example out.
+                mF7O9aC4KH4EpmwI/export?format=csv&gid=151344200  Example for
+                Google Drive link:  https://drive.google.com/uc?id=idofthefile
+                For Flat table input check the example.
 
         Returns:
             list of ApiTableqaResponse: Response from the API. Answers for the
@@ -270,11 +279,7 @@ AVERAGE
                 the schema defined below.   For URL, if you are providing
                 Google drive or Google Spreadsheet url ensure that you provide
                 a link which can download the file directly and not the share
-                link.  Example: For Google Spreadsheet, the url format will be
-                like below:
-                https://docs.google.com/spreadsheets/d/1TtzPAHqpaTB7Ltdq0zwZ8Fa
-                mF7OwI/export?format=csv&gid=151344200  Or for Google Drive,
-                it will be like below:
+                link.  Example for Google Drive: 
                 https://drive.google.com/uc?id=idofthefile
 
         Returns:
@@ -325,7 +330,6 @@ AVERAGE
                 body=None):
         """Does a POST request to /api/ner.
 
-        # Named Entity Recognition : Defintion and it's usage
         Named Entity Recognitiion  (NER) is extracting the specific Nouns such
         as, Person Names, Location names, Organization Names, Currency ,
         Dates. It is a classification task. NER can be used as a sub-task in
@@ -351,7 +355,13 @@ AVERAGE
 
         Args:
             body (object, optional): Add a JSON Input as per the schema
-                defined below
+                defined below  **Size limit:**   1MB for both text and URL
+                input  **URL Input:**  For URL, we now accept 4 contentTypes.
+                * html * plaintext * pdf * docx  If you are providing Google
+                drive or Google Spreadsheet url, ensure that you provide a
+                link which can download the file directly and not the share
+                link.  Example for Google Drive link:  
+                https://drive.google.com/uc?id=idofthefile
 
         Returns:
             list of ApiNerResponse: Response from the API. Array of Named
@@ -401,7 +411,6 @@ AVERAGE
                     body=None):
         """Does a POST request to /api/summary.
 
-        # Summarization : Defintion and it's usage
         Summarization generates a crisp content of the large input text which
         is highly coherent. 
         | Languages               | ISO Code |
@@ -451,7 +460,13 @@ AVERAGE
 
         Args:
             body (object, optional): Add a JSON Input as per the schema
-                defined below
+                defined below  **Size limit:**   1MB for both text and URL
+                input  **URL Input:**  For URL, we now accept 4 contentTypes.
+                * html * plaintext * pdf * docx  If you are providing Google
+                drive or Google Spreadsheet url, ensure that you provide a
+                link which can download the file directly and not the share
+                link.  Example for Google Drive link:  
+                https://drive.google.com/uc?id=idofthefile
 
         Returns:
             ApiSummaryResponse: Response from the API. JSON Object with
@@ -501,7 +516,6 @@ AVERAGE
                       body=None):
         """Does a POST request to /api/translate.
 
-        # Translation : Defintion and it's usage
         Machine Translation is translating the text automatically from  one
         language to another langauge.
         # Languages covered:
@@ -566,11 +580,30 @@ AVERAGE
 
         Args:
             body (object, optional): Add a JSON Input as per the schema
-                defined below
+                defined below  **Size limit:**   1MB for both text and URL
+                input  **URL Input:**  For URL, we now accept 4 contentTypes.
+                * html * plaintext * pdf * docx  If you are providing Google
+                drive or Google Spreadsheet url, ensure that you provide a
+                link which can download the file directly and not the share
+                link.  Example for Google Drive link:  
+                https://drive.google.com/uc?id=idofthefile  **preserveFormat
+                Flag:**  When true:  This applies only for PDF and DOCX
+                content types. The API will try to maintain the source file
+                formatting. DOCX files will mostly work without any issues.
+                But for PDF files, the API will try to maintain the format but
+                it is not guaranteed. Scanned documents will also not work.
+                For PDF files, if the target language font is not renderred
+                properly, please report the issue at info@firstlanguage.in 
+                When false:  If the flag is false, then the API will simply
+                read all text in the PDF and docx files and translate and send
+                the response back as plaintext.
 
         Returns:
             ApiTranslateResponse: Response from the API. JSON Object with
-                translation of the text given
+                translation of the text given. 
+
+For PDF and DOCX contenttype
+                the response will be a PDF file or a DOCX file.
 
         Raises:
             APIException: When an error occurs while fetching the data from
@@ -596,18 +629,18 @@ AVERAGE
         _request = self.config.http_client.post(_query_url, headers=_headers, parameters=APIHelper.json_serialize(body))
         # Apply authentication scheme on request
         self.apply_auth_schemes(_request, 'global')
-
-        _response = self.execute_request(_request)
-
-        # Endpoint and global error handling using HTTP status codes.
-        if _response.status_code == 400:
-            raise ErrorsException('Bad Request', _response)
-        elif _response.status_code == 426:
-            raise M426ErrorException('Please use HTTPS protocol', _response)
-        elif _response.status_code == 429:
-            raise APIException('Too Many Requests', _response)
-        self.validate_response(_response)
-
-        decoded = APIHelper.json_deserialize(_response.text, ApiTranslateResponse.from_dictionary)
-
-        return decoded
+        if body['input']['preserveFormat'] == 'true' and (body['input']['contentType'] == 'pdf' or body['input']['contentType'] == 'docx'):
+            response = self.execute_request(_request, True)            
+        else:
+            _response = self.execute_request(_request)
+             # Endpoint and global error handling using HTTP status codes.
+            if _response.status_code == 400:
+                raise ErrorsException('Bad Request', _response)
+            elif _response.status_code == 426:
+                raise M426ErrorException('Please use HTTPS protocol', _response)
+            elif _response.status_code == 429:
+                raise APIException('Too Many Requests', _response)            
+            self.validate_response(_response)
+            decoded = APIHelper.json_deserialize(_response.text, ApiTranslateResponse.from_dictionary)
+            return decoded
+        return response

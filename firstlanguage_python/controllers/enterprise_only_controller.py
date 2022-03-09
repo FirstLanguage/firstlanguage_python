@@ -26,7 +26,6 @@ class EnterpriseOnlyController(BaseController):
                           body=None):
         """Does a POST request to /api/question.
 
-        # QA : Defintion and it's usage
         A Question Answering System retrieves the answer relevant to the
         question given by the user. A question answering system can be used
         for building a text based chatbots, search engines etc. Our question
@@ -36,6 +35,9 @@ class EnterpriseOnlyController(BaseController):
         etc.
         For ISO code reference, please check the link
         https://www.loc.gov/standards/iso639-2/php/code_list.php
+        For enterprise, the context for the questions will be stored in
+        memory. The context can be read from wide range of file and any number
+        of files.
 
         Args:
             body (ApiQuestionRequest, optional): Add a JSON Input as per the

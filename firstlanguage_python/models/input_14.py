@@ -21,9 +21,10 @@ class Input14(object):
     Attributes:
         lang (string): Allowed language code. Refer Allowed languages
             section.
-        content_type (string): Allowed values or html or text. If html is
-            specified all html tags and special characters will be stripped
-            before processing.
+        content_type (string): Allowed values are:html,plaintext, pdf, docx If
+            html is specified all html tags and special characters will be
+            stripped before processing. For PDF and docx, all text will be
+            read. Scanned documents will not work.
         url (string): Text from this URL will be read and a summary generated
 
     """

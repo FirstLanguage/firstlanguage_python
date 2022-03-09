@@ -37,6 +37,8 @@ firstlanguage_python/http/requests_client.py
 firstlanguage_python/http/auth/__init__.py
 firstlanguage_python/http/auth/custom_header_authentication.py
 firstlanguage_python/models/__init__.py
+firstlanguage_python/models/api_imagecaption_request.py
+firstlanguage_python/models/api_imagecaption_response.py
 firstlanguage_python/models/api_ner_request.py
 firstlanguage_python/models/api_ner_request_1.py
 firstlanguage_python/models/api_ner_response.py
@@ -63,6 +65,7 @@ firstlanguage_python/models/input_12.py
 firstlanguage_python/models/input_13.py
 firstlanguage_python/models/input_14.py
 firstlanguage_python/models/input_15.py
+firstlanguage_python/models/input_16.py
 firstlanguage_python/models/input_2.py
 firstlanguage_python/models/input_3.py
 firstlanguage_python/models/input_4.py

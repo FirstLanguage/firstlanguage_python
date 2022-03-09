@@ -21,11 +21,13 @@ class Input16(object):
     Attributes:
         lang (string): Allowed language code. Refer Allowed languages
             section.
-        content_type (string): Allowed values or html or text. If html is
-            specified all html tags and special characters will be stripped
-            before processing.
+        content_type (string): Allowed values are:html,plaintext, pdf, docx If
+            html is specified all html tags and special characters will be
+            stripped before processing. For PDF and docx, all text will be
+            read. Scanned documents will not work.
         url (string): Text from this URL will be read and a translation
             generated
+        preserve_format (string): Accepted values are true, false.
 
     """
 
@@ -33,19 +35,22 @@ class Input16(object):
     _names = {
         "lang": 'lang',
         "content_type": 'contentType',
-        "url": 'url'
+        "url": 'url',
+        "preserve_format": 'preserveFormat'
     }
 
     def __init__(self,
                  lang=None,
                  content_type=None,
-                 url=None):
+                 url=None,
+                 preserve_format=None):
         """Constructor for the Input16 class"""
 
         # Initialize members of the class
         self.lang = lang
         self.content_type = content_type
         self.url = url
+        self.preserve_format = preserve_format
 
     @classmethod
     def from_dictionary(cls,
@@ -68,11 +73,13 @@ class Input16(object):
         lang = dictionary.get('lang')
         content_type = dictionary.get('contentType')
         url = dictionary.get('url')
+        preserve_format = dictionary.get('preserveFormat')
 
         # Return an object of this model
         return cls(lang,
                    content_type,
-                   url)
+                   url,
+                   preserve_format)
 
     @classmethod
     def validate(cls, val):
