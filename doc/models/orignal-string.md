@@ -1,9 +1,9 @@
 
-# Orignal String
+# original String
 
 ## Structure
 
-`OrignalString`
+`originalString`
 
 ## Fields
 

@@ -12,9 +12,9 @@ from jsonschema import ValidationError
 from firstlanguage_python.api_helper import APIHelper
 
 
-class OrignalString(object):
+class originalString(object):
 
-    """Implementation of the 'OrignalString' model.
+    """Implementation of the 'originalString' model.
 
     TODO: type model description here.
 
@@ -30,7 +30,7 @@ class OrignalString(object):
 
     def __init__(self,
                  morph_attr=None):
-        """Constructor for the OrignalString class"""
+        """Constructor for the originalString class"""
 
         # Initialize members of the class
         self.morph_attr = morph_attr

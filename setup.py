@@ -12,14 +12,14 @@ else:
 
 setup(
     name='firstlanguage_python',
-    version='2.3',
+    version='2.4',
     description='Python client library for FirstLanguage API',
     long_description=long_description,
     long_description_content_type="text/markdown",
     author='FirstLanguage',
     author_email='info@firstlanguage.in',
     url='https://www.firstlanguage.in/contactus',
-    download_url = 'https://github.com/FirstLanguage/firstlanguage_python/archive/refs/tags/v2.3.tar.gz',
+    download_url = 'https://github.com/FirstLanguage/firstlanguage_python/archive/refs/tags/v2.4.tar.gz',
     keywords = ['FirstLanguage API', 'NLP', 'SDK', 'Python', 'Natural Language Processing'],  
     packages=find_packages(),
     install_requires=[

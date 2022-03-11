@@ -43,7 +43,7 @@ __all__ = [
     'input_14',
     'input_15',
     'input_16',
-    'orignal_string',
+    'original_string',
     'responselemma',
     'responsepo',
     'responsestem',

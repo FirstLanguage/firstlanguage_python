@@ -1,6 +1,6 @@
 {
-  "id": "OrignalString",
-  "title": "OrignalString",
+  "id": "originalString",
+  "title": "originalString",
   "type": "object",
   "properties": {
     "morph_attr": {

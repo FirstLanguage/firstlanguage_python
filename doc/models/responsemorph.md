@@ -9,13 +9,13 @@
 
 | Name | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `orignal_string` | [`OrignalString`](../../doc/models/orignal-string.md) | Optional | - |
+| `original_string` | [`originalString`](../../doc/models/original-string.md) | Optional | - |
 
 ## Example (as JSON)
 
 ```json
 {
-  "orignalString": null
+  "originalString": null
 }
 ```
 
