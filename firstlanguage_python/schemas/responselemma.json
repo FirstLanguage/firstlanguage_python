@@ -3,7 +3,7 @@
   "title": "responselemma",
   "type": "object",
   "properties": {
-    "orginalText": {
+    "originalText": {
       "type": "string"
     },
     "lemmatized": {

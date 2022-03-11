@@ -80,8 +80,8 @@ class BasicAPIsControllerTests(ControllerTestBase):
         
         # Test whether the captured response is as we expected
         self.assertIsNotNone(result)
-        expected_body = APIHelper.json_deserialize('[{"orginalText":"அவள்","stem":"அவள்"},{"orginalText":"வேகமாக","ste'
-            'm":"வேகம்"},{"orginalText":"ஓடினாள்","stem":"ஓடி"}]')
+        expected_body = APIHelper.json_deserialize('[{"originalText":"அவள்","stem":"அவள்"},{"originalText":"வேகமாக","ste'
+            'm":"வேகம்"},{"originalText":"ஓடினாள்","stem":"ஓடி"}]')
         received_body = APIHelper.json_deserialize(self.response_catcher.response.text)
         self.assertTrue(TestHelper.match_body(expected_body, received_body))
 
@@ -131,9 +131,9 @@ class BasicAPIsControllerTests(ControllerTestBase):
         
         # Test whether the captured response is as we expected
         self.assertIsNotNone(result)
-        expected_body = APIHelper.json_deserialize('[{"orginalText":"Smiling","lemmatized":"smile"},{"orginalText":"ma'
-            'kes","lemmatized":"make"},{"orginalText":"everyone","lemmatized":"'
-            'everyone"},{"orginalText":"happy","lemmatized":"happy"}]')
+        expected_body = APIHelper.json_deserialize('[{"originalText":"Smiling","lemmatized":"smile"},{"originalText":"ma'
+            'kes","lemmatized":"make"},{"originalText":"everyone","lemmatized":"'
+            'everyone"},{"originalText":"happy","lemmatized":"happy"}]')
         received_body = APIHelper.json_deserialize(self.response_catcher.response.text)
         self.assertTrue(TestHelper.match_body(expected_body, received_body))
 
@@ -239,10 +239,10 @@ class BasicAPIsControllerTests(ControllerTestBase):
         
         # Test whether the captured response is as we expected
         self.assertIsNotNone(result)
-        expected_body = APIHelper.json_deserialize('[{"orginalText":"Let","postag":"VERB"},{"orginalText":"us","postag'
-            '":"PRON"},{"orginalText":"begin","postag":"VERB"},{"orginalText":"'
-            'the","postag":"DET"},{"orginalText":"API","postag":"PROPN"},{"orgi'
-            'nalText":"development","postag":"NOUN"},{"orginalText":".","postag'
+        expected_body = APIHelper.json_deserialize('[{"originalText":"Let","postag":"VERB"},{"originalText":"us","postag'
+            '":"PRON"},{"originalText":"begin","postag":"VERB"},{"originalText":"'
+            'the","postag":"DET"},{"originalText":"API","postag":"PROPN"},{"orgi'
+            'nalText":"development","postag":"NOUN"},{"originalText":".","postag'
             '":"PUNCT"}]')
         received_body = APIHelper.json_deserialize(self.response_catcher.response.text)
         self.assertTrue(TestHelper.match_body(expected_body, received_body))

@@ -3,7 +3,7 @@
   "title": "responsepo",
   "type": "object",
   "properties": {
-    "orginalText": {
+    "originalText": {
       "type": "string"
     },
     "postag": {

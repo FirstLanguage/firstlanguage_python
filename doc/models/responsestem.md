@@ -9,14 +9,14 @@
 
 | Name | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `orginal_text` | `string` | Optional | - |
+| `original_text` | `string` | Optional | - |
 | `stem` | `string` | Optional | - |
 
 ## Example (as JSON)
 
 ```json
 {
-  "orginalText": null,
+  "originalText": null,
   "stem": null
 }
 ```

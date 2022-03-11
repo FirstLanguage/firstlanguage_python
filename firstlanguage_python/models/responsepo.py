@@ -19,24 +19,24 @@ class Responsepo(object):
     TODO: type model description here.
 
     Attributes:
-        orginal_text (string): TODO: type description here.
+        original_text (string): TODO: type description here.
         postag (string): TODO: type description here.
 
     """
 
     # Create a mapping from Model property names to API property names
     _names = {
-        "orginal_text": 'orginalText',
+        "original_text": 'originalText',
         "postag": 'postag'
     }
 
     def __init__(self,
-                 orginal_text=None,
+                 original_text=None,
                  postag=None):
         """Constructor for the Responsepo class"""
 
         # Initialize members of the class
-        self.orginal_text = orginal_text
+        self.original_text = original_text
         self.postag = postag
 
     @classmethod
@@ -57,11 +57,11 @@ class Responsepo(object):
             return None
 
         # Extract variables from the dictionary
-        orginal_text = dictionary.get('orginalText')
+        original_text = dictionary.get('originalText')
         postag = dictionary.get('postag')
 
         # Return an object of this model
-        return cls(orginal_text,
+        return cls(original_text,
                    postag)
 
     @classmethod

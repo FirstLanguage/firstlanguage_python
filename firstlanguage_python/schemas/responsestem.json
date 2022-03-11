@@ -3,7 +3,7 @@
   "title": "responsestem",
   "type": "object",
   "properties": {
-    "orginalText": {
+    "originalText": {
       "type": "string"
     },
     "stem": {

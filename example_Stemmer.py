@@ -17,7 +17,7 @@ advanced_api_controller = client.advanced_api
 result = basic_api_controller.get_stemmer(body)
 
 for res in result:
-  print("Original Text passed: "+res.orginal_text)
+  print("Original Text passed: "+res.original_text)
   print("Stemmed result: "+res.stem)
 
 '{"input":{"lang":"ja","url": "https://drive.google.com/uc?id=1JFV4lyT1Ajn_6jfmf5CXxw5bzQ0ra1V5", "contentType":"pdf","preserveFormat":"true"}}'

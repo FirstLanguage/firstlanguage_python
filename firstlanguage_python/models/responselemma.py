@@ -19,24 +19,24 @@ class Responselemma(object):
     TODO: type model description here.
 
     Attributes:
-        orginal_text (string): TODO: type description here.
+        original_text (string): TODO: type description here.
         lemmatized (string): TODO: type description here.
 
     """
 
     # Create a mapping from Model property names to API property names
     _names = {
-        "orginal_text": 'orginalText',
+        "original_text": 'originalText',
         "lemmatized": 'lemmatized'
     }
 
     def __init__(self,
-                 orginal_text=None,
+                 original_text=None,
                  lemmatized=None):
         """Constructor for the Responselemma class"""
 
         # Initialize members of the class
-        self.orginal_text = orginal_text
+        self.original_text = original_text
         self.lemmatized = lemmatized
 
     @classmethod
@@ -57,11 +57,11 @@ class Responselemma(object):
             return None
 
         # Extract variables from the dictionary
-        orginal_text = dictionary.get('orginalText')
+        original_text = dictionary.get('originalText')
         lemmatized = dictionary.get('lemmatized')
 
         # Return an object of this model
-        return cls(orginal_text,
+        return cls(original_text,
                    lemmatized)
 
     @classmethod

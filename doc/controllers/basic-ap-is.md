@@ -81,15 +81,15 @@ result = basic_ap_is_controller.get_stemmer(body)
 ```json
 [
   {
-    "orginalText": "அவள்",
+    "originalText": "அவள்",
     "stem": "அவள்"
   },
   {
-    "orginalText": "வேகமாக",
+    "originalText": "வேகமாக",
     "stem": "வேகம்"
   },
   {
-    "orginalText": "ஓடினாள்",
+    "originalText": "ஓடினாள்",
     "stem": "ஓடி"
   }
 ]
@@ -157,19 +157,19 @@ result = basic_ap_is_controller.get_lemma(body)
 ```json
 [
   {
-    "orginalText": "Smiling",
+    "originalText": "Smiling",
     "lemmatized": "smile"
   },
   {
-    "orginalText": "makes",
+    "originalText": "makes",
     "lemmatized": "make"
   },
   {
-    "orginalText": "everyone",
+    "originalText": "everyone",
     "lemmatized": "everyone"
   },
   {
-    "orginalText": "happy",
+    "originalText": "happy",
     "lemmatized": "happy"
   }
 ]
@@ -455,31 +455,31 @@ result = basic_ap_is_controller.get_postag(body)
 ```json
 [
   {
-    "orginalText": "Let",
+    "originalText": "Let",
     "postag": "VERB"
   },
   {
-    "orginalText": "us",
+    "originalText": "us",
     "postag": "PRON"
   },
   {
-    "orginalText": "begin",
+    "originalText": "begin",
     "postag": "VERB"
   },
   {
-    "orginalText": "the",
+    "originalText": "the",
     "postag": "DET"
   },
   {
-    "orginalText": "API",
+    "originalText": "API",
     "postag": "PROPN"
   },
   {
-    "orginalText": "development",
+    "originalText": "development",
     "postag": "NOUN"
   },
   {
-    "orginalText": ".",
+    "originalText": ".",
     "postag": "PUNCT"
   }
 ]

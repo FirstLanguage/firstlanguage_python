@@ -19,24 +19,24 @@ class Responsestem(object):
     TODO: type model description here.
 
     Attributes:
-        orginal_text (string): TODO: type description here.
+        original_text (string): TODO: type description here.
         stem (string): TODO: type description here.
 
     """
 
     # Create a mapping from Model property names to API property names
     _names = {
-        "orginal_text": 'orginalText',
+        "original_text": 'originalText',
         "stem": 'stem'
     }
 
     def __init__(self,
-                 orginal_text=None,
+                 original_text=None,
                  stem=None):
         """Constructor for the Responsestem class"""
 
         # Initialize members of the class
-        self.orginal_text = orginal_text
+        self.original_text = original_text
         self.stem = stem
 
     @classmethod
@@ -57,11 +57,11 @@ class Responsestem(object):
             return None
 
         # Extract variables from the dictionary
-        orginal_text = dictionary.get('orginalText')
+        original_text = dictionary.get('originalText')
         stem = dictionary.get('stem')
 
         # Return an object of this model
-        return cls(orginal_text,
+        return cls(original_text,
                    stem)
 
     @classmethod

@@ -43,7 +43,7 @@ basic_api_controller = client.basic_api
 result = basic_api_controller.get_stemmer(body)
 
 for res in result:
-  print("Original Text passed: "+res.orginal_text)
+  print("Original Text passed: "+res.original_text)
   print("Stemmed result: "+res.stem)
 
 
