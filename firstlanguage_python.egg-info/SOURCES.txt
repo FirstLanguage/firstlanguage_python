@@ -74,7 +74,7 @@ firstlanguage_python/models/input_6.py
 firstlanguage_python/models/input_7.py
 firstlanguage_python/models/input_8.py
 firstlanguage_python/models/input_9.py
-firstlanguage_python/models/original_string.py
+firstlanguage_python/models/orignal_string.py
 firstlanguage_python/models/responseclassify.py
 firstlanguage_python/models/responselemma.py
 firstlanguage_python/models/responsemorph.py

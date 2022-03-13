@@ -629,7 +629,7 @@ For PDF and DOCX contenttype
         _request = self.config.http_client.post(_query_url, headers=_headers, parameters=APIHelper.json_serialize(body))
         # Apply authentication scheme on request
         self.apply_auth_schemes(_request, 'global')
-        if body['input']['preserveFormat'] == 'true' and (body['input']['contentType'] == 'pdf' or body['input']['contentType'] == 'docx'):
+        if 'preserveFormat' in body["input"].keys() and body['input']['preserveFormat'] == 'true' and (body['input']['contentType'] == 'pdf' or body['input']['contentType'] == 'docx'):
             response = self.execute_request(_request, True)            
         else:
             _response = self.execute_request(_request)
