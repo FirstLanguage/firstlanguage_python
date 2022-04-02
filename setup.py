@@ -12,7 +12,7 @@ else:
 
 setup(
     name='firstlanguage_python',
-    version='2.5',
+    version='2.5.1',
     description='Python client library for FirstLanguage API',
     long_description=long_description,
     long_description_content_type="text/markdown",
@@ -27,7 +27,6 @@ setup(
         'requests~=2.25',
         'cachecontrol~=0.12.6',
         'python-dateutil~=2.8.1',
-        'enum34~=1.1, >=1.1.10',
         'jsonschema~=3.2.0'
     ],
     tests_require=[
